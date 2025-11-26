@@ -1,0 +1,41 @@
+
+    /* Simple modern stylesheet — single-file */
+    :root{--accent:#0055ff;--muted:#6b7280;--bg:#f7f7fb;--card:#ffffff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.45;color:#111;background:var(--bg)}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+
+    header{background:linear-gradient(90deg,#12263a, #0f1724);color:#fff;padding:18px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand .logo{width:46px;height:46px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7c5cff);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
+    nav{margin-left:auto}
+    .nav-links{display:flex;gap:18px;align-items:center}
+    a.btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:48px 0}
+    .hero h1{font-size:32px;margin:0}
+    .hero p{color:var(--muted);margin:12px 0 18px}
+    .cta-row{display:flex;gap:12px}
+
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(16,24,40,0.06)}
+
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px}
+    .service h4{margin:8px 0;color:#0f1724}
+    .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px}
+
+    .testimonials{display:flex;flex-direction:column;gap:12px}
+    .testimonial{padding:14px;border-radius:10px;background:#fff}
+
+    footer{padding:24px 0;color:var(--muted)}
+
+    /* responsive nav */
+    .mobile-toggle{display:none}
+    @media (max-width:800px){
+      .hero{grid-template-columns:1fr}
+      nav{display:none}
+      .mobile-toggle{display:block;margin-left:auto}
+    }
+
+    /* simple form */
+    form{display:grid;gap:8px}
+    input,textarea,select{padding:10px;border-radius:8px;border:1px solid #e6e9ef; }
