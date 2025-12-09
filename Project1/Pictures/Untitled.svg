@@ -1,0 +1,18 @@
+<svg id="eYNqXgjBV9W1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+viewBox="0 0 1920 1080" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" 
+project-id="a8366ec0452345d19c98fbc210a8dd31" 
+export-id="399291b46b6d460399cef8d2f99c1e36" 
+cached="false">
+<defs>
+<filter id="eYNqXgjBV9W2-filter" x="-150%" y="-150%" width="400%" height="400%">
+<feGaussianBlur id="eYNqXgjBV9W2-filter-drop-shadow-0-blur" in="SourceAlpha" stdDeviation="0,0"/>
+<feOffset id="eYNqXgjBV9W2-filter-drop-shadow-0-offset" dx="0" dy="36" result="tmp"/>
+<feFlood id="eYNqXgjBV9W2-filter-drop-shadow-0-flood" flood-color="#415cb7"/>
+<feComposite id="eYNqXgjBV9W2-filter-drop-shadow-0-composite" operator="in" in2="tmp"/>
+<feMerge id="eYNqXgjBV9W2-filter-drop-shadow-0-merge" result="result">
+<feMergeNode id="eYNqXgjBV9W2-filter-drop-shadow-0-merge-node-1"/>
+<feMergeNode id="eYNqXgjBV9W2-filter-drop-shadow-0-merge-node-2" in="SourceGraphic"/>
+</feMerge>
+</filter>
+</defs>
+<path d="M0,540c143.34605-77.481618,351.896307-193.436594,767.720539-192.066767c441.927592,6.42236,974.828452,184.112577,1152.27946,324.152361" transform="matrix(1.048275 0 0 1 -45.343999 0.000001)" filter="url(#eYNqXgjBV9W2-filter)" fill="none" stroke="#8598d2" stroke-width="50" stroke-dashoffset="-10"/></svg>
