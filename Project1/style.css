@@ -5,7 +5,7 @@
 }
 @font-face{
   font-family: "Inter";
-  src: url("/Project1/Fonts/Inter-Regular.ttf") format("ttf");
+  src: url("/Fonts/Inter-Regular.ttf") format("ttf");
   font-style: normal;
 }
 body{
@@ -193,7 +193,7 @@ div.container-middlecard2 img{
   flex-direction: column;
   align-items: center;
   position: relative;
-  background-image: url(/Project1/Pictures/bcgpic.png);
+  background-image: url(/Pictures/bcgpic.png);
    background-size: 100% auto;       /* растянуть на весь экран */
   background-repeat: no-repeat; /* не повторять */
   background-position: center top;
@@ -347,7 +347,7 @@ div.group img{
     position: relative;/* REDACTOR PAPOK */
 }
 .contact{
-  background-image: url(/Project1/Pictures/footerbcg.png);
+  background-image: url(/Pictures/footerbcg.png);
    background-size: cover;       /* растянуть на весь экран */
   background-repeat: no-repeat; /* не повторять */
     max-width: 100%;
