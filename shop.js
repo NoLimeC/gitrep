@@ -1,10 +1,10 @@
 // Small shop: products, add-to-cart, cart persistence.
 (function(){
   const products = [
-    { id: 'p1', title: 'Продвижение Instagram', price: 399, img: '/Project1/Pictures/Ints.png' },
-    { id: 'p2', title: 'Продвижение Facebook', price: 449, img: '/Project1/Pictures/fb.png' },
-    { id: 'p3', title: 'SEO пакет для компании', price: 799, img: '/Project1/Pictures/company.png' },
-    { id: 'p4', title: 'Бренд + дизайн', price: 999, img: '/Project1/Pictures/brand.png' }
+    { id: 'p1', title: 'Продвижение Instagram', price: 399, img: '/Pictures/Ints.png' },
+    { id: 'p2', title: 'Продвижение Facebook', price: 449, img: '/Pictures/fb.png' },
+    { id: 'p3', title: 'SEO пакет для компании', price: 799, img: '/Pictures/company.png' },
+    { id: 'p4', title: 'Бренд + дизайн', price: 999, img: '/Pictures/brand.png' }
   ];
 
   // small helper for DOM
