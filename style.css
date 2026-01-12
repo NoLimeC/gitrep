@@ -1,40 +1,78 @@
+/* Global settings */
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: "Inter", sans-serif;
+
+  --innerShadowBlackDimenstion: -4px;
 }
 @font-face{
   font-family: "Inter";
-  src: url("/Fonts/Inter-Regular.ttf") format("ttf");
+  font-optical-sizing: auto;
+  font-weight: 100;
   font-style: normal;
 }
 body{
+  
   background-color: #DBE4EE;
-}
-.container-main{
-  text-align: center;
+  /* text-align: center; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
-.infooter{
+
+.page{ /* настройка сетки */
+  flex-direction: column;
+  padding: 25px 50px;
+  width: 1120px;
   max-width: 1120px;
 }
-.top{
+
+p {
+  font-weight: 400;
+  font-style: normal;
+
+  font-size:clamp(10px,2vw,20px) ;
+  line-height: 1.5;
+  text-align: left;
+
+  color: #324a7b;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 900;
+  color: #1F2C58;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+/* Навигаия */
+
+.top{ /* навигация */
   /* center the whole nav block on the page */
-  max-width: 1120px; /* keeps the nav a fixed maximum width */
+  min-width: 400px;
   width: 100%;
-  margin: 20px auto; /* centers the nav horizontally */
   padding: 10px 70px;
   background-color: #435FBE;
   box-sizing: border-box;
-  border-radius: 50px;
-  display: flex;
+  border-radius: 30px;
   background-image:linear-gradient(#435FBE,#1F2C58 );
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
-nav.top img{
+nav.top img{ /* logo inside the nav */
   height: 40px;
-  margin-right: auto;
+  /* margin-right: auto; */
 }
 
 /* layout for the menu inside the nav */
@@ -45,109 +83,140 @@ nav.top ul{
   gap: 30px;
   align-items: center;
 }
+
 a{
   text-decoration: none;
   color: white;
   font-size: 12px;
   font-weight: 500;
-  font-family: "Inter", sans-serif;
 }
 .ourprice{
   text-decoration: underline;
 }
 /* small visual tweak for the nav button so it doesn't wrap awkwardly */
 .contacts{
-  margin-left: 20px;
+  /* margin-left: 20px; */
   background-image: linear-gradient(to bottom right,#B7C7FF,#3B75F0);
-  padding:0px 10px 0px 10px;
+  padding:0px 10px;
   color: white;
   border-radius: 20px;
   border: none;
- box-shadow: 12px -12px 10px -7px rgba(41, 70, 134, 0.75) inset;
-  overflow: visible;
+  box-shadow: 12px -12px 10px -7px rgba(41, 70, 134, 0.75) inset;
+  /* overflow: visible; */
 }
-.container-middlecard img{
-    max-width: 100%;
-  height: auto;
-  display: block;
-  align-items: right;
-  flex-shrink: 1;
-}
-#whowearepic {
-  width: 420px;        /* базовый размер */
-  max-width: 100%;     /* но сжимается */
-}
-.container-middlecard2 img{
-  max-width: 300px;
-  max-height: 250px;
-  width: 100%;
-  height: 100%;
-  align-items: right;
-}
+
+
+
+
+
+
+
+
+/* Кто мы есть */
 .container-middlecard{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1120px;
+  align-items: top;
   width: 100%;
-  padding: 0px 16px;
+  margin-top: 50px;
 
 }
-.container-middlecard2{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1120px;
-  width: 100%;
-  padding: 0px 16px;
+.container-middlecard img{
+  width: 40%;
+  max-width: 420px;
 }
 
 .textmiddle{
-  flex: 1;
   min-width: 280px;
-}
-.textmiddle h1,.textmiddle2 h1{
-  font-family: "Inter", sans-serif;
-  font-size:clamp(30px,6vw,59px) ;
-  font-weight: bold;
-  color: #1F2C58;
-  text-align: left;
-}
-.textmiddle2{
-  width: 400px;
-  margin-right: 50px;
-}
-.textmiddle p,.textmiddle2 p{
-   font-size:clamp(10px,2vw,20px) ;
-  font-family: "Inter", sans-serif;
-  line-height: 1.5;
-  text-align: left;
-  padding: 10px;
-  color: #324a7b;
 }
 
 #textpod{
   border-left: 4px solid #324a7b; /* цвет и толщина полоски */
   padding-left: 14px;             /* отступ между текстом и линией */
   margin: 0;                      /* убрать стандартный отступ */
-   font-size:clamp(10px,2vw,20px) ;
-  font-family: "Inter", sans-serif;               /* пример */
+   font-size:clamp(10px,2vw,20px) ;           /* пример */
   color: #324a7b;
 
 }
 
+.textmiddle p{
+  padding-top: 10px;
+  color: #324a7b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Наши услуги */
+
+.container-middlecard2{
+  margin-top: 25px;
+  display: flex;
+  align-items: top;
+  /* justify-content: space-between; */
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.container-middlecard2 img{
+  width: 40%;
+  max-width: 420px;
+}
+
+/* .textmiddle h1,.textmiddle2 h1{
+  
+} */
+.textmiddle2{
+  transform: translateX(70px);
+}
+
 #arrow{
     min-width: 60px;
-    max-width: 200px;
+    max-width: 150px;
     position: relative;
-    right: 0px;
-    bottom: 110px;
-    left: 400px;
 }
-#socialcard{
-  max-width: 507px;
-  max-height: 414px;
+
+.container-middlecard2 p{
+  color: #324a7b;
+  padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Продвижение */
+
+#footercard{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
   width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+#socialcard{
+  width: 450px
 }
 #socialcardweb{
   margin: 10px;
@@ -160,34 +229,7 @@ a{
   justify-self: center; /* center within the grid */
   margin-top: 8px;
 }
-#footercard{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  width: 100%;
-  justify-items: start; /* default align for grid children */
-}
-.imgmid{
-  position: relative;
-  width: 507px;
-  height: 414px;
 
-}
-.imgmid img{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-
-}
-.reviews-client{
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-size: 59px;
-  color:white;
-  padding-top: 25%;
-
-}
 .container-footercard p{
   text-align: left;
   padding-left: 5px;
@@ -195,57 +237,94 @@ a{
   padding-bottom: 15px;
   font-size: 21px;
   color: #F1F1F1;
-  font-family: "Inter", sans-serif;
   opacity: 0.75;
 }
 .container-footercard h1{
-  font-size: 59px;
-  font-family: "Inter", sans-serif;
   color: white;
-  padding-left: 5px;
 }
 
 .container-footercard{
-  margin: 0 auto;
-  padding: 0 16px;
-  padding-top: 4%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
+
+.footercard-bg{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.footercard-bg img{
+  /* width: 120%; */
+  height: 130%;
+  transform: translateY(230px) translateX(-300px);
+}
+
+/* .imgmid{
+  position: relative;
+  width: 507px;
+  height: 414px;
+
+} */
+/* .imgmid img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+
+
+
+/* Отзывы клиентов */
+
+.comments {
+  /* margin-top: 50px; */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  background-image: url(/Pictures/bcgpic.png);
-   background-size: 100% auto;       /* растянуть на весь экран */
-  background-repeat: no-repeat; /* не повторять */
-  background-position: center top;
-  height: 2050px;
-  inset: 0;
+  width: 100%;
+  z-index: 1;
 }
 
+.reviews-client{
+  text-align: center;
+  color:white;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
 
 .carusel{
-    margin:100px auto;
-    margin-top: -100px;
-    max-width: 1020px;
-    max-height: 200px;
+    /* max-width: 1020px; */
+    /* max-height: 200px; */
     background-color: #1F2C58;
-    width: 50%;
+    width: 100%;
     display: flex;
-    align-items: center; /* vertically center groups so names are inside visible area */
-    /* keep scrollable by pointer/wheel, but hide scrollbar in all browsers */
+    align-items: center; 
     overflow-x: auto;
+    padding: 30px 0;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
-    border-radius:100px 100px 100px 100px;
-    z-index: 99;
+    border-radius: 150px;
     position: relative;
   }
 /* webkit scrollbar hide (Chrome, Safari, Opera) */
 .carusel::-webkit-scrollbar{ display: none; }
+
 .group{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1em;
+    gap: 10px;
     animation: spin 0s linear infinite;
     padding-right: 1em;
     max-height: 500px;
@@ -256,44 +335,72 @@ div.group img{
     display:block;
     max-width:100%;
 }
-.card{
-    /* layout card as column: avatar above, name below */
-    flex: 0 0 7.4em; /* give more vertical room so name fits under avatar */
+.comment{
     padding: 6px 0;
-    background: transparent; /* keep panel background outside */
-    font-size: 14px;
     display:flex;
     flex-direction: column;
     align-items:center;
-    justify-content:flex-start;
-    gap:13px;
-;
+    justify-content: center;
 }
 
 /* avatar inside card — set size and make it sit slightly higher when needed */
-.card img{
+.comment img{
     width:72px;                 /* avatar size inside the circular card */
     height:72px;
     object-fit:cover;
     border-radius:50%;
-    display:block;
+    /* display:block; */
     background-color: #FFAA71;
 }
 
 /* review bubble that sits above the avatar */
-.card .review{
-    background: rgba(255,255,255,0.96);
-    color: #0f2a44;
-    padding: 6px 10px;
-    border-radius: 10px;
+.comment .review{
+  background: #656D86;
+  box-shadow: 
+    inset 0 3px 0 0 rgba(255, 255, 255, 0.25),
+    inset 0 var(--innerShadowBlackDimenstion) 0 0 rgba(0, 0, 0, 0.25);
+  padding: 6px 10px;
+  border-radius: 10px;
+    /* box-shadow: 0 8px 22px rgba(0,0,0,0.25); */
+  width: 160px;
+  max-width: calc(100% - 6px);
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment .review p{
+    color: white;
     font-size: 11px;
     text-align: center;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.25);
-    width: 160px;
-    max-width: calc(100% - 6px);
-    height: 60px;
 }
-.card .review::after{
+
+.comment .reviewSection{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.comment .reviewSection .commentArrow {
+  --arrowWidth: 15px;
+  --arrowHeight: 17px;
+
+  border-left: var(--arrowWidth) solid transparent;
+  border-right: var(--arrowWidth) solid transparent;
+  border-top: var(--arrowHeight) solid  #656D86;
+  transform: translateY(var(--innerShadowBlackDimenstion));
+
+  box-shadow: 
+    inset 0 var(--innerShadowBlackDimenstion) 0 0 rgba(0, 0, 0, 0.25);
+}
+
+/* .comment .review::after{
     content: "";
     display:block;
     width: 0; height: 0;
@@ -302,13 +409,13 @@ div.group img{
     border-right: 7px solid transparent;
     border-top: 7px solid rgba(255,255,255,0.96);
     transform: translateY(2px);
-}
+} */
 
 /* pull the bubble slightly up so it visually overlaps the top of the avatar */
-.card{ gap: 10px; }
-.card .review{ margin-top: -10px; }
+.comment{ gap: 10px; }
+.comment .review{ margin-top: -10px; }
 
-.card .name{
+.comment .name{
     color: #ffffff;
     font-weight: 700;
     font-size: 12px;
@@ -323,7 +430,7 @@ div.group img{
 .carusel{ min-height: 120px; }
 
 /* helper class: add .card.lift to move avatar slightly up */
-.card.lift img{
+.comment.lift img{
   transform: translateY(-8px);
 }
 @keyframes spin{
@@ -331,37 +438,80 @@ div.group img{
     from { transform: translateX(0); }
     to   { transform: translateX(-100%); }
 }
-.ourcases div.ower-text h1{
-    position: absolute;
-    top: 70%;
-    left: 40px;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    font-family: "Inter", sans-serif;  
+
+
+
+
+
+
+
+/* Наши работы */
+
+.ourcases .strokeSVG {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -20;
+  pointer-events: none;
 }
+
+.ourcases .strokeSVG img{
+  --size: 300%;
+
+  width: var(--size);
+  height: var(--size);
+  transform: translateY(-700px) translateX(0px);
+}
+
+.ourcases .ower-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    transform: translateY(-150px) translateX(60px);
+}
+
+.ourcases .ower-text p{
+    font-size: 18px;
+}
+
+.ourcases .ower-text h1{
+    font-size: 36px;
+}
+
+.ourcases .ower-text h1, p{
+  color: white;
+  text-align: left;
+}
+
+/* .ourcases .ower-text h1{
+    font-size: 36px;
+    color: white;
+}
+
+.ourcases .ower-text p{
+  font-size: 18px;
+    color: white;
+} */
+
 .folders{
+  padding-top: 100px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto);
   position: relative; /* make container relative for absolute children */
-  margin: 0 auto;
   place-items: center;
 }
-.ourcases h1{
-    font-family: "Inter", sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-    color: #1F2C58;
-    text-align: left;
-    margin-bottom: 20px;
-    padding-left: 4%;
-}
+
 .ourcases{
-  max-width: 1120px;
-  margin: 0 auto;
+  width: 100%;
+  padding-top: 50px;
+  position: relative;
+  z-index: -1;
 }
+
 .folders img{
     max-width: 490px;
     width: 100%;
@@ -371,9 +521,15 @@ div.group img{
     align-items: center;
     padding-right:20px;
 }
+
 .folderwork{
-    position: relative;/* REDACTOR PAPOK */
+  max-width: 490px;
+  width: 100%;
+  max-height: 395px;
+  height: 100%;
+  position: relative;/* REDACTOR PAPOK */
 }
+
 .contact{
   background-image: url(/Pictures/footerbcg.png);
    background-size: cover;       /* растянуть на весь экран */
@@ -383,19 +539,31 @@ div.group img{
     text-align: center;
     height: 1000px;
 }
+
 .namefeed{
     max-width: 1120px;
     margin: 0 auto;
     text-align: left;
 }
+
 .contact h1{
-    font-family: "Inter", sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-    color: #ffffff;
+    color: white;
     text-align: left;
-    padding-top: 10%;
-    padding-left: 4%;
+    padding-top: 50px;
 }
 
+.contact .contact-bg{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  pointer-events: none;
+}
 
+.contact .contact-bg img{
+  /* width: 120%; */
+  height: 130%;
+  /* transform: translateY(230px) translateX(-300px); */
+}
