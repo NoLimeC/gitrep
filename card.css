@@ -2,6 +2,7 @@
   /* ====== размеры системы ====== */
   width: 480px;
   height: 414px;
+  
   border-radius: 50px;
   padding: 50px;
 
@@ -15,7 +16,7 @@
   overflow: hidden;
 
   display: flex;
-  flex: none;
+  /* flex: none; */
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;

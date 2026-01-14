@@ -16,11 +16,12 @@
   font-style: normal;
 }
 body{
-  
+  width: 100%;
   background-color: #DBE4EE;
   /* text-align: center; */
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .page{ /* настройка сетки */
@@ -28,6 +29,17 @@ body{
   padding: 25px 50px;
   width: 1120px;
   max-width: 1120px;
+  min-width: 360px;
+
+  max-height: calc(100% - 90rem);
+}
+
+.safeZoneIMG {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 p {
@@ -46,10 +58,14 @@ h1 {
   font-weight: 900;
   color: #1F2C58;
   text-align: left;
+
+  min-width: 30px;
 }
 
 
-
+img{
+  pointer-events: none;
+}
 
 
 
@@ -157,7 +173,7 @@ a{
 /* Наши услуги */
 
 .container-middlecard2{
-  margin-top: 25px;
+  margin-top: 50px;
   display: flex;
   align-items: top;
   /* justify-content: space-between; */
@@ -168,6 +184,7 @@ a{
 
 .container-middlecard2 img{
   width: 40%;
+  height: 40%;
   max-width: 420px;
 }
 
@@ -182,6 +199,7 @@ a{
     min-width: 60px;
     max-width: 150px;
     position: relative;
+    pointer-events: none;
 }
 
 .container-middlecard2 p{
@@ -231,6 +249,7 @@ a{
 }
 
 .container-footercard p{
+  z-index: 1;
   text-align: left;
   padding-left: 5px;
   padding-top: 5px;
@@ -240,6 +259,7 @@ a{
   opacity: 0.75;
 }
 .container-footercard h1{
+  z-index: 1;
   color: white;
 }
 
@@ -477,6 +497,10 @@ div.group img{
     font-size: 18px;
 }
 
+.ourcases h1{
+    text-align: center;
+}
+
 .ourcases .ower-text h1{
     font-size: 36px;
 }
@@ -531,25 +555,21 @@ div.group img{
 }
 
 .contact{
-  background-image: url(/Pictures/footerbcg.png);
-   background-size: cover;       /* растянуть на весь экран */
-  background-repeat: no-repeat; /* не повторять */
-    max-width: 100%;
-    margin: 0 auto;
+  padding-top: 50px;
+    width: 100%;
     text-align: center;
-    height: 1000px;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* overflow: hidden; */
 
-.namefeed{
-    max-width: 1120px;
-    margin: 0 auto;
-    text-align: left;
-}
+    h1{
 
-.contact h1{
     color: white;
     text-align: left;
     padding-top: 50px;
+}
 }
 
 .contact .contact-bg{
@@ -558,12 +578,11 @@ div.group img{
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 0;
+  z-index: -2;
   pointer-events: none;
-}
+  transform: translateY(90rem) scale(1.5);
 
-.contact .contact-bg img{
-  /* width: 120%; */
-  height: 130%;
-  /* transform: translateY(230px) translateX(-300px); */
+  img {
+  
+}
 }
