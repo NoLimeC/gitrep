@@ -54,7 +54,7 @@ p {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: clamp(24px, 10vw, 50px);
   font-weight: 900;
   color: #1F2C58;
   text-align: left;
@@ -224,9 +224,8 @@ a{
 
 #footercard{
   margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   width: 100%;
   position: relative;
@@ -268,7 +267,7 @@ a{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  
   position: relative;
 }
 
@@ -585,4 +584,9 @@ div.group img{
   img {
   
 }
+}
+@media(max-width: 1084px){
+
+
+
 }
