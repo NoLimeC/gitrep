@@ -30,16 +30,17 @@
 }
 
 .tags{
-  font-size: clamp(12px, 4vw, 20px);
+  margin-bottom: 10px;
+  font-size:clamp(1rem,2.5vw,2.5rem);
   font-style: italic;
 }
 
 .card h1{
-  font-size: clamp(24px, 10vw, 50px);
+  font-size: clamp(2rem,3.5vw,5.5rem);
 }
 
 .card p{
-    font-size: clamp(12px, 4vw, 20px);
+    font-size:clamp(1rem,2.5vw,2.5rem);
     margin-top: -10px;
 }
 
