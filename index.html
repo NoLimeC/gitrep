@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="/card.css">
+  <link rel="stylesheet" href="/form.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -18,6 +19,77 @@
 <body>
   <div class="safeZoneIMG">
     <div class="page">
+
+      <div class="formSection">
+        <div class="form">
+          <div class="cancelBtn">
+          <div class="x">
+            <img id="closeForm" src="/Pictures/x.svg" alt="">
+          </div>
+        </div>
+          <h1>Оформление</h1>
+          <div class="choosedSection">
+            <h2>Вы выбрали</h2>
+            <div class="items">
+              <div class="item" id="igAccount">
+                <img src="./Pictures/icons/igIcon.svg" alt="">
+                <p>IG Аккаунт</p>
+                <div class="cancelBtn">
+                  <div class="x">
+                    <img src="/Pictures/x.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item" id="fbAccount">
+                <img src="./Pictures/icons/fbIcon.svg" alt="">
+                <p>FB Аккаунт</p>
+                <div class="cancelBtn">
+                  <div class="x">
+                    <img src="/Pictures/x.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item" id="company">
+                <img src="./Pictures/icons/companyIcon.svg" alt="">
+                <p>FB Аккаунт</p>
+                <div class="cancelBtn">
+                  <div class="x">
+                    <img src="/Pictures/x.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item" id="brand">
+                <img src="./Pictures/icons/brandIcon.svg" alt="">
+                <p>Бренд</p>
+                <div class="cancelBtn">
+                  <div class="x">
+                    <img src="/Pictures/x.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item" id="web">
+                <img src="./Pictures/icons/webIcon.svg" alt="">
+                <p>Веб-Сайт</p>
+                <div class="cancelBtn">
+                  <div class="x">
+                    <img src="/Pictures/x.svg" alt="">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <form action="">
+              <input type="text" placeholder="Введите имя">
+              <input type="email" placeholder="Ваш email">
+              <textarea id="msg" placeholder="Сообщение...">
+                </textarea>
+              <button id="sendForm" type="submit">Отправить <img src="Pictures/sendArrow.svg" alt=""></button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
       <div class="container-main">
         <nav class="top">
           <img src="/Pictures/logoheader.png" alt="">
@@ -29,11 +101,11 @@
             <li><a href="shop.html">Магазин</a></li>
           </ul>
           <button class="contacts">Контакти</button>
-      <div class="burger">
-          <span></span>
-        </div>
+          <div class="burger">
+            <span></span>
+          </div>
         </nav>
-        
+
 
         <div class="container-middlecard">
           <div class="textmiddle">
