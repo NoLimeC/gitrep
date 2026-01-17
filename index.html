@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./card.css">
   <link rel="stylesheet" href="./form.css">
+  <link rel="stylesheet" href="./media.css">
+  <link rel="stylesheet" href="./ourcases.css">
+  <link rel="stylesheet" href="./contacts.css">
+  <link rel="stylesheet" href="./comments.css">
+  <link rel="stylesheet" href="./nav.css">
+  <link rel="stylesheet" href="./whoweare.css">
+  <link rel="stylesheet" href="./footercard.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -137,7 +144,7 @@
 
 
 
-        
+
         <div class="container-middlecard2">
           <img src="./Pictures/ourposlugy.png" alt="">
           <div class="textmiddle2">
@@ -159,7 +166,7 @@
         <h1>Продвижение</h1>
         <p>Реклама, продвижение вашего бренда, страницы, компании.</p>
         <div id="footercard">
-          <div class="card" style="
+          <div class="card" data-id="ig" style="
         --bg: linear-gradient(135deg, #B7C7FF, #8E2CFD, #FD0A62);
         --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
@@ -170,7 +177,7 @@
             <div class="imageCard" style=" --icon: url('./Pictures/Instagram_icon.png.webp');"></div>
             <div class="tags">Работа / Товар /<br>Интернет услуги</div>
           </div>
-          <div class="card" style="
+          <div class="card" data-id="fb" style="
         --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);
         --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
@@ -181,7 +188,7 @@
             <div class="imageCard" style=" --icon: url('./Pictures/Instagram_icon.png.webp');"></div>
             <div class="tags">Работа / Товар /<br>Интернет услуги</div>
           </div>
-          <div class="card" style="
+          <div class="card" data-id="company" style="
         --bg: linear-gradient(135deg, #FFF1CC, #5E3804);
         --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
@@ -192,7 +199,7 @@
             <div class="imageCard" style=" --icon: url('./Pictures/Instagram_icon.png.webp');"></div>
             <div class="tags">Работа / Товар /<br>Интернет услуги</div>
           </div>
-          <div class="card" style="
+          <div class="card" data-id="brand" style="
         --bg: linear-gradient(135deg, #DBC0FF, #7931D8);
         --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
@@ -203,7 +210,7 @@
             <div class="imageCard" style=" --icon: url('./Pictures/Instagram_icon.png.webp');"></div>
             <div class="tags">Работа / Товар /<br>Интернет услуги</div>
           </div>
-          <div class="card" style="
+          <div class="card" data-id="web" style="
         --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);
         --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
@@ -219,8 +226,11 @@
         <img alt="" id="socialcard" src="./Pictures/brand.png">
         <img alt="" id="socialcardweb" src="./Pictures/website.png"> -->
         </div>
-        <div class="footercard-bg">
-          <img src="./Pictures/footercard.svg" alt="">
+        <div class="openForm">
+          <button id="openForm" type="submit">Отправить</button>
+          <div class="footercard-bg">
+            <img src="./Pictures/footercard.svg" alt="">
+          </div>
         </div>
       </div>
 
@@ -337,66 +347,34 @@
           <div class="folderwork">
             <div class="ower-text">
               <p>Название:</p>
-              <h1>TGI-GROUR</h1>
-            </div>
-            <img src="./Pictures/folderwork.png" alt="TGI-GROUP">
-          </div>
-          <div class="folderwork">
-            <div class="ower-text">
-              <p>Название:</p>
-              <h1>UA</h1>
-            </div>
-            <img src="./Pictures/folderua.png" alt="UA">
-          </div>
-          <div class="folderwork">
-            <div class="ower-text">
-              <p>Название:</p>
               <h1>SALESWAVE</h1>
             </div>
-            <img src="./Pictures/foldergirl.png" alt="SALESWAVE">
           </div>
-          <div class="folderwork">
-            <div class="ower-text">
-              <p>Название:</p>
-              <h1>ZORKO</h1>
-            </div>
-            <img src="./Pictures/folderold.png" alt="ZORKO">
-          </div>
-          <div class="folderwork">
-            <div class="ower-text">
-              <p>Название:</p>
-              <h1>GlASSARTSTORIES</h1>
-            </div>
-            <img src="./Pictures/folderman.png" alt="GlASSARTSTORIES">
-          </div>
-          <div class="folderwork">
-            <div class="ower-text">
-              <p>Название:</p>
-              <h1>MULTILABEL</h1>
-            </div>
-            <img src="./Pictures/foldercat.png" alt="MULTILABEL">
+
+          <div class="strokeSVG">
+            <img src="./Pictures/casesStroke.svg" alt="">
           </div>
         </div>
 
-        <div class="strokeSVG">
-          <img src="./Pictures/casesStroke.svg" alt="">
-        </div>
-      </div>
 
-
-      <div class="contact">
-        <div class="namefeed">
-          <h1>Контакти</h1>
-        </div>
-        <div class="contact-bg">
-          <img src="./Pictures/contacts.svg" alt="">
+        <div class="contact">
+          <div class="namefeed">
+            <h1>Контакти</h1>
+            <div class="contactsInfo">
+              <p>СЕО компании — Александр Стар — alex@msygroup.com</p>
+            </div>
+          </div>
+          <div class="contact-bg">
+            <img src="./Pictures/contacts.svg" alt="">
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
   </div>
   </div>
+
+  <script src="./form.js"></script>
 </body>
 
 </html>

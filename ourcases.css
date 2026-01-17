@@ -1,0 +1,85 @@
+.ourcases .strokeSVG {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -20;
+  pointer-events: none;
+}
+
+.ourcases .strokeSVG img{
+  --size: 300%;
+
+  width: var(--size);
+  height: var(--size);
+  transform: translateY(-700px) translateX(0px);
+}
+
+.ourcases .ower-text {
+    padding: 70px;
+    position: absolute;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.ourcases .ower-text p{
+    font-size: 18px;
+}
+
+.ourcases h1{
+    text-align: center;
+}
+
+.ourcases .ower-text h1{
+    font-size: 25px;
+}
+
+
+
+/* .ourcases .ower-text h1{
+    font-size: 36px;
+    color: white;
+}
+
+.ourcases .ower-text p{
+  font-size: 18px;
+    color: white;
+} */
+
+.folders{
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  position: relative; /* make container relative for absolute children */
+  place-items: center;
+}
+
+.ourcases{
+  width: 100%;
+  padding-top: 100px;
+  position: relative;
+  z-index: -1;
+}
+
+.folders img{
+  display: block;
+    width: 100%;
+    object-fit: cover;
+    align-items: center;
+}
+
+.folderwork{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: fit-content;
+  position: relative;/* REDACTOR PAPOK */
+  padding-bottom: 100px;
+}

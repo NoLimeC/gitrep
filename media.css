@@ -1,0 +1,149 @@
+@media (max-width: 1488px) {
+  .textmiddle h1 {
+    font-size: clamp(1.5em,3.5vw,5.5rem);
+    font-weight: 900;
+    color: #1F2C58;
+    text-align: left;
+    min-width: 30px;
+}
+
+.container-middlecard2 h1 {
+    font-size: clamp(1.5em,3.5vw,5.5rem);
+    font-weight: 900;
+    color: #1F2C58;
+    text-align: left;
+    min-width: 30px;
+}
+
+h1 {
+    font-size: clamp(2.5em,3.5vw,5.5rem);
+    font-weight: 900;
+    color: #1F2C58;
+    text-align: left;
+    min-width: 30px;
+}
+
+  .textmiddle p {
+    font-size: clamp(1em,2vw,25px);
+  }
+  #textpod{
+    font-size: clamp(1em,2vw,25px);
+  }
+.container-middlecard2 p{
+  font-size:clamp(1em,2vw,25px) ;
+}
+  
+
+}
+@media(max-width: 768px){
+
+  #footercard{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .folders{
+    display: flex;
+        flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+    .folderwork{
+      height: clamp(1em, 23em, 23em);
+    }
+
+    .ourcases .ower-text{
+      font-size:clamp(10px,2vw,15px);
+    }
+  }
+.container-footercard h1{
+  padding-top: 10px;
+}
+#footercard{
+  margin-top: 20px;
+}
+.footercard-bg img{
+  transform: translateY(200px) translateX(-300px);
+}
+
+@media(max-width: 500px){
+}
+  
+
+@media(max-width: 481px){
+  .container-middlecard, .container-middlecard2{
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  .container-middlecard img, .container-middlecard2 img{
+    width: 0;
+    height:0;
+  }
+  .textmiddle2{
+    transform: translateX(0px);
+  }
+  #arrow{
+    margin-right: 0px;
+  }
+  
+  
+}
+.ourcases .ower-text h1, p{
+  color: white;
+  text-align: left;
+}
+
+@media (max-width: 1054px) {
+  .arrowMiddleCard {
+    width: 30px; /* ширина родителя */
+    position: relative;
+    overflow: visible;
+    left: -10px;
+}
+
+  #arrow {
+    width: 75px;
+    height: auto;
+    display: block;
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  .burger{
+    display: flex;
+ }
+  .burger span{
+    display: block;
+  }
+  
+ /* .top{ в разработке
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0; 
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: black;*/
+
+  
+  .top ul{
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  ul li {
+  display: none;
+}
+button.contacts{
+  display: none;
+}
+}

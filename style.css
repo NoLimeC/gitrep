@@ -1,5 +1,4 @@
 /* Global settings */
-
 *{
   margin: 0;
   padding: 0;
@@ -15,14 +14,21 @@
   font-weight: 100;
   font-style: normal;
 }
+
 body{
   width: 100%;
-  height: 370vh;
   background-color: #DBE4EE;
   /* text-align: center; */
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
+}
+
+.safeZoneIMG {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .page{ /* настройка сетки */
@@ -36,19 +42,24 @@ body{
   /* max-height: calc(100% - 90rem); */
 }
 
-.safeZoneIMG {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
 p {
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 1.5;
+  text-align: left;
+
+  color: #324a7b;
   font-size:clamp(10px,2vw,20px) ;
 }
 
-
+h1 {
+    font-size: 54px;
+    font-weight: 900;
+    color: #1F2C58;
+    text-align: left;
+  min-width: 30px;
+}
 
 
 img{
@@ -56,733 +67,46 @@ img{
 }
 
 
+.openForm{
 
-
-
-/* Навигаия */
-
-.top{ /* навигация */
-  /* center the whole nav block on the page */
-  width: 100%;
-  padding: 10px 70px;
-  background-color: #435FBE;
-  box-sizing: border-box;
-  border-radius: 30px;
-  background-image:linear-gradient(#435FBE,#1F2C58 );
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-nav.top img{ /* logo inside the nav */
-  height: 40px;
-  /* margin-right: auto; */
-}
-
-/* layout for the menu inside the nav */
-.top ul{
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  align-items: center;
-}
-
-.burger{
-  display: none;
-  position: relative;
-  z-index: 50;
-  align-items: center;
-  justify-content: flex-end;
-  width: 30px;
-  height: 18px;
-  padding-top: 20px;
-}
-.burger span{
-  height: 2px;
-  width: 80%;
-  transform: scale(1);
-  background-color: white;
-}
-.burger::before,.burger::after{
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background-color: white;
-  transition: all 0.3s ease;
-}
-.burger::before{
-  top: 11px;
-}
-.burger::after{
-  bottom:-10px;
-}
-.burger.active span{
-  transform: scale(0);
-}
-.burger.active::before{
-  top: 50%;
-  transform: translate(0,50%) rotate(-45deg);
-}
-.burger.active::after{
-  bottom: 50%;
-  transform: translate(0,50%) rotate(45deg);
-}
-
-@media (max-width: 768px) {
-  .burger{
-    display: flex;
- }
-  .burger span{
-    display: block;
-  }
-  
- /* .top{ в разработке
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0; 
-    right: 0;
-    bottom: 0;
-    z-index: 50;
-    overflow-y: auto;
-    padding: 50px 40px;
-    background-color: black;*/
-
-  
-  .top ul{
-    flex-direction: column;
-    row-gap: 30px;
-  }
-
-  ul li {
-  display: none;
-}
-button.contacts{
-  display: none;
-}
-}
-
-a{
-  text-decoration: none;
-  color: white;
-  font-size: 12px;
-  font-weight: 500;
-}
-.ourprice{
-  text-decoration: underline;
-}
-/* small visual tweak for the nav button so it doesn't wrap awkwardly */
-.contacts{
-  /* margin-left: 20px; */
-  background-image: linear-gradient(to bottom right,#B7C7FF,#3B75F0);
-  padding:0px 10px;
-  color: white;
-  border-radius: 20px;
-  border: none;
-  box-shadow: 12px -12px 10px -7px rgba(41, 70, 134, 0.75) inset;
-  /* overflow: visible; */
-}
-
-
-
-
-
-
-
-
-/* Кто мы есть */
-.container-middlecard{
-  display: flex;
-  align-items: top;
-  width: 100%;
-  margin-top: 50px;
-
-}
-.container-middlecard img{
-  width: 40%;
-  height: 40%;
-  max-width: 420px;
-}
-
-.textmiddle{
-  min-width: 280px;
-}
-
-#textpod{
-  border-left: 4px solid #324a7b; /* цвет и толщина полоски */
-  padding-left: 14px;             /* отступ между текстом и линией */
-  margin: 0;                      /* убрать стандартный отступ */
-   font-size:clamp(10px,2vw,25px) ;
-  color: #324a7b;
-
-}
-
-.textmiddle p{
-  font-size:clamp(10px,2vw,25px) ;
-  padding-top: 10px;
-  color: #324a7b;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Наши услуги */
-
-.container-middlecard2{
-  margin-top: 50px;
-  padding-bottom: 50px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.container-middlecard2 img{
-  width: 40%;
-  height: 40%;
-  max-width: 420px;
-}
-
-/* .textmiddle h1,.textmiddle2 h1{
-  
-} */
-.textmiddle2{
-  width: fit-content;
-}
-
-.arrowMiddleCard {
- width: 100px; /* ширина родителя */
-  position: relative;
-  overflow: visible;
-  left: -50px;
-}
-
-#arrow{
-  width: 150px; /* размер самой стрелки, можно больше родителя */
-  height: auto;
-  display: block;
-  position: relative;
-}
-@media (max-width: 1054px) {
-  .arrowMiddleCard {
-    width: 30px; /* ширина родителя */
-    position: relative;
-    overflow: visible;
-    left: -10px;
-}
-
-  #arrow {
-    width: 75px;
-    height: auto;
-    display: block;
-    position: relative;
-  }
-}
-
-.container-middlecard2 p{
-  font-size:clamp(10px,2vw,25px) ;
-  color: #324a7b;
-  padding-top: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Продвижение */
-
-#footercard{
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-#socialcard{
-  width: 450px
-}
-#socialcardweb{
-  margin: 10px;
-  max-width: 507px;
-  max-height: 414px;
-  width: 50%;
-  display: block;
-  /* make this image span the full grid and center itself */
-  grid-column: 1 / -1; /* span both columns */
-  justify-self: center; /* center within the grid */
-  margin-top: 8px;
-}
-
-.container-footercard p{
-  font-size:clamp(20px,2vw,25px) ;
-  z-index: 1;
-  text-align: left;
-  padding-left: 5px;
-  padding-top: 5px;
-  padding-bottom: 15px;
-  /*font-size: 21px;*/
-  color: #F1F1F1;
-  opacity: 0.75;
-}
-.container-footercard h1{
-  z-index: 1;
-  color: white;
-}
-
-.container-footercard{
   padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  
-  position: relative;
-}
+  padding-bottom: 100px;
 
-.footercard-bg{
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.footercard-bg img{
-  /* width: 120%; */
-  height: 130%;
-  transform: translateY(230px) translateX(-300px);
-}
-
-/* .imgmid{
-  position: relative;
-  width: 507px;
-  height: 414px;
-
-} */
-/* .imgmid img{
-  position: absolute;
-  inset: 0;
   width: 100%;
-  height: 100%;
-} */
-
-
-
-
-/* Отзывы клиентов */
-
-.comments {
-  /* margin-top: 50px; */
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  z-index: 1;
-}
-
-.reviews-client{
-  text-align: center;
-  color:white;
-  padding-top: 50px;
-  padding-bottom: 30px;
-}
-
-.carusel{
-    /* max-width: 1020px; */
-    /* max-height: 200px; */
-    background-color: #1F2C58;
-    width: 100%;
-    display: flex;
-    align-items: center; 
-    overflow-x: auto;
-    padding: 30px 0;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-    border-radius: 150px;
-    position: relative;
-  }
-/* webkit scrollbar hide (Chrome, Safari, Opera) */
-.carusel::-webkit-scrollbar{ display: none; }
-
-.group{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    animation: spin 0s linear infinite;
-    padding-right: 1em;
-    max-height: 500px;
-    height: 90%;
-    
-}
-div.group img{
-    display:block;
-    max-width:100%;
-}
-.comment{
-    padding: 6px 0;
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: center;
-}
-
-/* avatar inside card — set size and make it sit slightly higher when needed */
-.comment img{
-    width:72px;                 /* avatar size inside the circular card */
-    height:72px;
-    object-fit:cover;
-    border-radius:50%;
-    /* display:block; */
-    background-color: #FFAA71;
-}
-
-/* review bubble that sits above the avatar */
-.comment .review{
-  background: #656D86;
-  box-shadow: 
-    inset 0 3px 0 0 rgba(255, 255, 255, 0.25),
-    inset 0 var(--innerShadowBlackDimenstion) 0 0 rgba(0, 0, 0, 0.25);
-  padding: 6px 10px;
-  border-radius: 10px;
-    /* box-shadow: 0 8px 22px rgba(0,0,0,0.25); */
-  width: 160px;
-  max-width: calc(100% - 6px);
-  height: 60px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.comment .review p{
-    font-size:clamp(10px,2vw, 15px) ;
-    color: white;
-    text-align: center;
-}
-
-.comment .reviewSection{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-.comment .reviewSection .commentArrow {
-  --arrowWidth: 15px;
-  --arrowHeight: 17px;
-
-  border-left: var(--arrowWidth) solid transparent;
-  border-right: var(--arrowWidth) solid transparent;
-  border-top: var(--arrowHeight) solid  #656D86;
-  transform: translateY(var(--innerShadowBlackDimenstion));
-
-  box-shadow: 
-    inset 0 var(--innerShadowBlackDimenstion) 0 0 rgba(0, 0, 0, 0.25);
-}
-
-/* .comment .review::after{
-    content: "";
-    display:block;
-    width: 0; height: 0;
-    margin: 0 auto;
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-top: 7px solid rgba(255,255,255,0.96);
-    transform: translateY(2px);
-} */
-
-/* pull the bubble slightly up so it visually overlaps the top of the avatar */
-.comment{ gap: 10px; }
-.comment .review{ margin-top: -10px; }
-
-.comment .name{
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 12px;
-    text-align: center;
-    letter-spacing: 0.8px;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-    white-space: nowrap; /* keep name on one line */
-    overflow: visible;
-}
-
-/* ensure the cards and names are fully visible when the container is small */
-.carusel{ min-height: 120px; }
-
-/* helper class: add .card.lift to move avatar slightly up */
-.comment.lift img{
-  transform: translateY(-8px);
-}
-@keyframes spin{
-    /* use transform with translateX for correct cross-browser support */
-    from { transform: translateX(0); }
-    to   { transform: translateX(-100%); }
-}
-
-
-
-
-
-
-
-/* Наши работы */
-
-.ourcases .strokeSVG {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -20;
-  pointer-events: none;
-}
-
-.ourcases .strokeSVG img{
-  --size: 300%;
-
-  width: var(--size);
-  height: var(--size);
-  transform: translateY(-700px) translateX(0px);
-}
-
-.ourcases .ower-text {
-    padding: 70px;
-    position: absolute;
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    z-index: 2;
-}
-
-.ourcases .ower-text p{
-    font-size: 18px;
-}
-
-.ourcases h1{
-    text-align: center;
-}
-
-.ourcases .ower-text h1{
-    font-size: 25px;
-}
-
-
-
-/* .ourcases .ower-text h1{
-    font-size: 36px;
-    color: white;
-}
-
-.ourcases .ower-text p{
-  font-size: 18px;
-    color: white;
-} */
-
-.folders{
-  padding-top: 100px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
-  position: relative; /* make container relative for absolute children */
-  place-items: center;
-}
-
-.ourcases{
-  width: 100%;
-  padding-top: 50px;
-  position: relative;
-  z-index: -1;
-}
-
-.folders img{
-  display: block;
-    width: 100%;
-    object-fit: cover;
-    align-items: center;
-}
-
-.folderwork{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
   height: fit-content;
-  position: relative;/* REDACTOR PAPOK */
-}
 
-.contact{
-  padding-top: 50px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    /* overflow: hidden; */
-
-    h1{
-
-    color: white;
-    text-align: left;
-    padding-top: 50px;
-}
-}
-
-.contact .contact-bg{
-  position: absolute;
-  inset: 0;
   display: flex;
+
   justify-content: center;
   align-items: center;
-  z-index: -2;
-  pointer-events: none;
-  transform: translateY(90rem) scale(1.5);
-}
 
-p {
-  font-weight: 400;
-  font-style: normal;
-
-  font-size:clamp(1rem,2.5vw,2.5rem);
-  line-height: 1.5;
-  text-align: left;
-
-  color: #324a7b;
-}
- h1 {
-    font-size: 54px;
-    font-weight: 900;
-    color: #1F2C58;
-    text-align: left;
-  min-width: 30px;
-}
-@media (max-width: 1488px) {
-  .textmiddle h1 {
-    font-size: clamp(1.5em,3.5vw,5.5rem);
-    font-weight: 900;
-    color: #1F2C58;
-    text-align: left;
-    min-width: 30px;
-}
-
-.container-middlecard2 h1 {
-    font-size: clamp(1.5em,3.5vw,5.5rem);
-    font-weight: 900;
-    color: #1F2C58;
-    text-align: left;
-    min-width: 30px;
-}
-
-h1 {
-    font-size: clamp(2.5em,3.5vw,5.5rem);
-    font-weight: 900;
-    color: #1F2C58;
-    text-align: left;
-    min-width: 30px;
-}
-
-  .textmiddle p {
-    font-size: clamp(1em,2vw,25px);
-  }
-  #textpod{
-    font-size: clamp(1em,2vw,25px);
-  }
-.container-middlecard2 p{
-  font-size:clamp(1em,2vw,25px) ;
-}
+  #openForm {
+      position: relative;
+      background-color: #EAF4FF;
   
-
-}
-@media(max-width: 768px){
-
-  #footercard{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-  .folders{
-    display: flex;
-        flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-    .folderwork{
-      height: clamp(1em, 23em, 23em);
-    }
-
-    .ourcases .ower-text{
-      font-size:clamp(10px,2vw,15px);
-    }
-  }
-.container-footercard h1{
-  padding-top: 10px;
-}
-#footercard{
-  margin-top: 20px;
-}
-.footercard-bg img{
-  transform: translateY(200px) translateX(-300px);
-}
-
-@media(max-width: 500px){
-}
+      width: fit-content;
+      height: fit-content;
+      padding: 30px 50px 30px 50px;
   
-
-@media(max-width: 481px){
-  .container-middlecard, .container-middlecard2{
-    flex-direction: column;
-    align-items: center;
-
-  }
+      font-size: 25px;
+      color: #1F2C58;
   
-  .container-middlecard img, .container-middlecard2 img{
-    width: 0;
-    height:0;
-  }
-  .textmiddle2{
-    transform: translateX(0px);
-  }
-  #arrow{
-    margin-right: 0px;
-  }
+      border: none;
   
+      border-radius: 2em;
   
-}
-.ourcases .ower-text h1, p{
-  color: white;
-  text-align: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      flex-direction: row;
+      gap: 10px;
+  
+      img {
+          height: .5em;
+          margin-bottom: -3px;
+      }
+  
+      z-index: 2;
+  }
 }

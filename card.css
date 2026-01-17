@@ -1,6 +1,10 @@
 .card {
+
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+
   /* ====== размеры системы ====== */
-  width: clamp(250px, 50vw, 480px);
+  max-width: clamp(250px, 50vw, 480px);
   height: clamp(250px, 50vw, 480px);
   width: 100%;
 
@@ -43,6 +47,11 @@
   margin-bottom: 10px;
   font-size: clamp(1rem, 2.5vw, 1.5em);
   font-style: italic;
+}
+
+.card.selected {
+  outline: 3px solid #1F2C58;
+  transform: scale(1.03);
 }
 
 
