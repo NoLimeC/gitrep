@@ -157,6 +157,13 @@ nav.top img{ /* logo inside the nav */
     flex-direction: column;
     row-gap: 30px;
   }
+
+  ul li {
+  display: none;
+}
+button.contacts{
+  display: none;
+}
 }
 
 a{
@@ -197,6 +204,7 @@ a{
 }
 .container-middlecard img{
   width: 40%;
+  height: 40%;
   max-width: 420px;
 }
 
@@ -269,12 +277,21 @@ a{
   display: block;
   position: relative;
 }
-/* @media (max-width: 1054px) {
+@media (max-width: 1054px) {
+  .arrowMiddleCard {
+    width: 30px; /* ширина родителя */
+    position: relative;
+    overflow: visible;
+    left: -10px;
+}
+
   #arrow {
-    padding-top: 30px;
-     width: max-content;
+    width: 75px;
+    height: auto;
+    display: block;
+    position: relative;
   }
-} */
+}
 
 .container-middlecard2 p{
   font-size:clamp(10px,2vw,25px) ;
@@ -561,11 +578,13 @@ div.group img{
 }
 
 .ourcases .ower-text {
-    position: relative;
+    padding: 70px;
+    position: absolute;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    transform: translateY(-150px) translateX(60px);
+    z-index: 2;
 }
 
 .ourcases .ower-text p{
@@ -577,7 +596,7 @@ div.group img{
 }
 
 .ourcases .ower-text h1{
-    font-size: 36px;
+    font-size: 25px;
 }
 
 
@@ -609,19 +628,19 @@ div.group img{
 }
 
 .folders img{
-    
+  display: block;
     width: 100%;
-    height: 100%;
     object-fit: cover;
     align-items: center;
-    padding:20px;
 }
 
 .folderwork{
-  max-width: 490px;
   width: 100%;
-  max-height: 395px;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: fit-content;
   position: relative;/* REDACTOR PAPOK */
 }
 
@@ -672,13 +691,41 @@ p {
   min-width: 30px;
 }
 @media (max-width: 1488px) {
-  h1 {
-    font-size: clamp(2rem,3.5vw,5.5rem);
+  .textmiddle h1 {
+    font-size: clamp(1.5em,3.5vw,5.5rem);
     font-weight: 900;
     color: #1F2C58;
     text-align: left;
-  min-width: 30px;
+    min-width: 30px;
 }
+
+.container-middlecard2 h1 {
+    font-size: clamp(1.5em,3.5vw,5.5rem);
+    font-weight: 900;
+    color: #1F2C58;
+    text-align: left;
+    min-width: 30px;
+}
+
+h1 {
+    font-size: clamp(2.5em,3.5vw,5.5rem);
+    font-weight: 900;
+    color: #1F2C58;
+    text-align: left;
+    min-width: 30px;
+}
+
+  .textmiddle p {
+    font-size: clamp(1em,2vw,25px);
+  }
+  #textpod{
+    font-size: clamp(1em,2vw,25px);
+  }
+.container-middlecard2 p{
+  font-size:clamp(1em,2vw,25px) ;
+}
+  
+
 }
 @media(max-width: 768px){
 
@@ -692,6 +739,14 @@ p {
         flex-direction: column;
     flex-wrap: nowrap;
 }
+
+    .folderwork{
+      height: clamp(1em, 23em, 23em);
+    }
+
+    .ourcases .ower-text{
+      font-size:clamp(10px,2vw,15px);
+    }
   }
 .container-footercard h1{
   padding-top: 10px;
@@ -701,12 +756,6 @@ p {
 }
 .footercard-bg img{
   transform: translateY(200px) translateX(-300px);
-}
-ul li {
-  display: none;
-}
-button.contacts{
-  display: none;
 }
 
 @media(max-width: 500px){
