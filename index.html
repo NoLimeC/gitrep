@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/card.css">
-  <link rel="stylesheet" href="/form.css">
+  <link rel="stylesheet" href="./card.css">
+  <link rel="stylesheet" href="./form.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -16,83 +16,95 @@
   <title>MSY GROUP</title>
 </head>
 
-<body>  
+<body>
   <div class="safeZoneIMG">
-    <div class="page">
-
-      <div class="formSection">
-        <div class="form">
-          <div class="cancelBtn">
-          <div class="x">
-            <img id="closeForm" src="/Pictures/x.svg" alt="">
-          </div>
-        </div>
-          <h1>Оформление</h1>
-          <div class="choosedSection">
-            <h2>Вы выбрали</h2>
-            <div class="items">
-              <div class="item" id="igAccount">
-                <img src="./Pictures/icons/igIcon.svg" alt="">
-                <p>IG Аккаунт</p>
-                <div class="cancelBtn">
-                  <div class="x">
-                    <img src="/Pictures/x.svg" alt="">
-                  </div>
-                </div>
-              </div>
-              <div class="item" id="fbAccount">
-                <img src="./Pictures/icons/fbIcon.svg" alt="">
-                <p>FB Аккаунт</p>
-                <div class="cancelBtn">
-                  <div class="x">
-                    <img src="/Pictures/x.svg" alt="">
-                  </div>
-                </div>
-              </div>
-              <div class="item" id="company">
-                <img src="./Pictures/icons/companyIcon.svg" alt="">
-                <p>FB Аккаунт</p>
-                <div class="cancelBtn">
-                  <div class="x">
-                    <img src="/Pictures/x.svg" alt="">
-                  </div>
-                </div>
-              </div>
-              <div class="item" id="brand">
-                <img src="./Pictures/icons/brandIcon.svg" alt="">
-                <p>Бренд</p>
-                <div class="cancelBtn">
-                  <div class="x">
-                    <img src="/Pictures/x.svg" alt="">
-                  </div>
-                </div>
-              </div>
-              <div class="item" id="web">
-                <img src="./Pictures/icons/webIcon.svg" alt="">
-                <p>Веб-Сайт</p>
-                <div class="cancelBtn">
-                  <div class="x">
-                    <img src="/Pictures/x.svg" alt="">
-                  </div>
-                </div>
-              </div>
-
+    <div class="formSection">
+        <div class="formDiv">
+          <div id="closeFormParrent" class="cancelBtn">
+            <div class="x">
+              <img id="closeForm" src="./Pictures/x.svg" alt="">
             </div>
-            <form action="">
-              <input type="text" placeholder="Введите имя">
-              <input type="email" placeholder="Ваш email">
-              <textarea id="msg" placeholder="Сообщение...">
-                </textarea>
-              <button id="sendForm" type="submit">Отправить <img src="Pictures/sendArrow.svg" alt=""></button>
-            </form>
+          </div>
+          <div class="form">
+            <h1>Оформление</h1>
+            <div class="choosedSection">
+              <h2>Вы выбрали</h2>
+              <div class="items">
+                <div class="itemDiv">
+                  <div class="cancelBtn">
+                      <div class="x">
+                        <img src="./Pictures/x.svg" alt="">
+                      </div>
+                    </div>
+                  <div class="item" id="igAccount">
+                    <img src="./Pictures/icons/igIcon.svg" alt="">
+                    <p>IG Аккаунт</p>
+                  </div>
+                </div>
+
+                <div class="itemDiv">
+                  <div class="cancelBtn">
+                      <div class="x">
+                        <img src="./Pictures/x.svg" alt="">
+                      </div>
+                    </div>
+                  <div class="item" id="fbAccount">
+                    <img src="./Pictures/icons/fbIcon.svg" alt="">
+                    <p>FB Аккаунт</p>
+                  </div>
+                </div>
+
+                <div class="itemDiv">
+                  <div class="cancelBtn">
+                      <div class="x">
+                        <img src="./Pictures/x.svg" alt="">
+                      </div>
+                    </div>
+                  <div class="item" id="company">
+                    <img src="./Pictures/icons/companyIcon.svg" alt="">
+                    <p>FB Аккаунт</p>
+                  </div>
+                </div>
+
+                <div class="itemDiv">
+                  <div class="cancelBtn">
+                      <div class="x">
+                        <img src="./Pictures/x.svg" alt="">
+                      </div>
+                    </div>
+                  <div class="item" id="brand">
+                    <img src="./Pictures/icons/brandIcon.svg" alt="">
+                    <p>Бренд</p>
+                  </div>
+                </div>
+
+                <div class="itemDiv">
+                  <div class="cancelBtn">
+                      <div class="x">
+                        <img src="./Pictures/x.svg" alt="">
+                      </div>
+                    </div>
+                  <div class="item" id="web">
+                    <img src="./Pictures/icons/webIcon.svg" alt="">
+                    <p>Веб-Сайт</p>
+                  </div>
+                </div>
+
+              </div>
+              <form action="">
+                <input type="text" placeholder="Введите имя">
+                <input type="email" placeholder="Ваш email">
+                <textarea id="msg" placeholder="Сообщение..."></textarea>
+                <button id="sendForm" type="submit">Отправить <img src="./Pictures/sendArrow.svg" alt=""></button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-
-
+    <div class="page">
       <div class="container-main">
         <nav class="top">
-          <img src="/Pictures/logoheader.png" alt="">
+          <img src="./Pictures/logoheader.png" alt="">
           <ul>
             <li><a class="ourprice" href="#">Наші цінності</a></li>
             <li><a href="#">Послуги</a></li>
@@ -105,7 +117,7 @@
             <span></span>
           </div>
         </nav>
-        
+
 
         <div class="container-middlecard">
           <div class="textmiddle">
@@ -120,10 +132,10 @@
               до майбутнього.
             </p>
           </div>
-          <img id="whowearepic" src="/Pictures/whoweare.png" alt="">
+          <img id="whowearepic" src="./Pictures/whoweare.png" alt="">
         </div>
         <div class="container-middlecard2">
-          <img src="/Pictures/ourposlugy.png" alt="">
+          <img src="./Pictures/ourposlugy.png" alt="">
           <div class="textmiddle2">
             <h1>Наші послуги</h1>
             <p>Ми працюємо для того, щоб
@@ -131,7 +143,7 @@
               розвитку бізнесу максимально
               простим і результативним.</p>
           </div>
-          <img id="arrow" src="Pictures/arrow.png" alt="">
+          <img id="arrow" src="./Pictures/arrow.png" alt="">
         </div>
         <!-- decorative wave SVG inserted before reviews section -->
       </div>
@@ -143,7 +155,7 @@
         <div id="footercard">
           <div class="card" style="
         --bg: linear-gradient(135deg, #B7C7FF, #8E2CFD, #FD0A62);
-        --icon: url('/Pictures/Instagram_icon.png.webp');
+        --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
             <div>
               <h1>IG Аккаунт</h1>
@@ -154,7 +166,7 @@
           </div>
           <div class="card" style="
         --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);
-        --icon: url('/Pictures/Instagram_icon.png.webp');
+        --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
             <div>
               <h1>FB Аккаунт</h1>
@@ -165,7 +177,7 @@
           </div>
           <div class="card" style="
         --bg: linear-gradient(135deg, #FFF1CC, #5E3804);
-        --icon: url('/Pictures/Instagram_icon.png.webp');
+        --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
             <div>
               <h1>Компания</h1>
@@ -176,7 +188,7 @@
           </div>
           <div class="card" style="
         --bg: linear-gradient(135deg, #DBC0FF, #7931D8);
-        --icon: url('/Pictures/Instagram_icon.png.webp');
+        --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
             <div>
               <h1>Бренд</h1>
@@ -187,7 +199,7 @@
           </div>
           <div class="card" style="
         --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);
-        --icon: url('/Pictures/Instagram_icon.png.webp');
+        --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
             <div>
               <h1>веб-Сайт</h1>
@@ -196,10 +208,10 @@
             <div class="imageCard" style=" --icon: url('./Pictures/Instagram_icon.png.webp');"></div>
             <div class="tags">Работа / Товар /<br>Интернет услуги</div>
           </div>
-          <!-- <img alt="" id="socialcard" src="/Pictures/fb.png">
-        <img alt="" id="socialcard" src="/Pictures/company.png">
-        <img alt="" id="socialcard" src="/Pictures/brand.png">
-        <img alt="" id="socialcardweb" src="/Pictures/website.png"> -->
+          <!-- <img alt="" id="socialcard" src="./Pictures/fb.png">
+        <img alt="" id="socialcard" src="./Pictures/company.png">
+        <img alt="" id="socialcard" src="./Pictures/brand.png">
+        <img alt="" id="socialcardweb" src="./Pictures/website.png"> -->
         </div>
         <div class="footercard-bg">
           <img src="./Pictures/footercard.svg" alt="">
@@ -219,7 +231,7 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="/Pictures/Person2.png" alt="Марина">
+              <img src="./Pictures/Person2.png" alt="Марина">
               <div class="name">МАРИНА</div>
             </div>
 
@@ -231,7 +243,7 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="/Pictures/Person2.png" alt="Марина">
+              <img src="./Pictures/Person2.png" alt="Марина">
               <div class="name">МАРИНА</div>
             </div>
 
@@ -243,7 +255,7 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="/Pictures/Person2.png" alt="Марина">
+              <img src="./Pictures/Person2.png" alt="Марина">
               <div class="name">МАРИНА</div>
             </div>
 
@@ -256,7 +268,7 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="/Pictures/Person2.png" alt="Марина">
+              <img src="./Pictures/Person2.png" alt="Марина">
               <div class="name">МАРИНА</div>
             </div>
 
@@ -269,7 +281,7 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="/Pictures/Person2.png" alt="Марина">
+              <img src="./Pictures/Person2.png" alt="Марина">
               <div class="name">МАРИНА</div>
             </div>
 
@@ -281,7 +293,7 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="/Pictures/Person2.png" alt="Марина">
+              <img src="./Pictures/Person2.png" alt="Марина">
               <div class="name">МАРИНА</div>
             </div>
 
@@ -293,7 +305,7 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="/Pictures/Person2.png" alt="Марина">
+              <img src="./Pictures/Person2.png" alt="Марина">
               <div class="name">МАРИНА</div>
             </div>
 
@@ -305,7 +317,7 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="/Pictures/Person2.png" alt="Марина">
+              <img src="./Pictures/Person2.png" alt="Марина">
               <div class="name">МАРИНА</div>
             </div>
 
@@ -317,42 +329,42 @@
         <h1>Наші кейси</h1>
         <div class="folders">
           <div class="folderwork">
-            <img src="/Pictures/folderwork.png" alt="TGI-GROUP">
+            <img src="./Pictures/folderwork.png" alt="TGI-GROUP">
             <div class="ower-text">
               <p>Название:</p>
               <h1>TGI-GROUR</h1>
             </div>
           </div>
           <div class="folderwork">
-            <img src="/Pictures/folderua.png" alt="UA">
+            <img src="./Pictures/folderua.png" alt="UA">
             <div class="ower-text">
               <p>Название:</p>
               <h1>UA</h1>
             </div>
           </div>
           <div class="folderwork">
-            <img src="/Pictures/foldergirl.png" alt="SALESWAVE">
+            <img src="./Pictures/foldergirl.png" alt="SALESWAVE">
             <div class="ower-text">
               <p>Название:</p>
               <h1>SALESWAVE</h1>
             </div>
           </div>
           <div class="folderwork">
-            <img src="/Pictures/folderold.png" alt="ZORKO">
+            <img src="./Pictures/folderold.png" alt="ZORKO">
             <div class="ower-text">
               <p>Название:</p>
               <h1>ZORKO</h1>
             </div>
           </div>
           <div class="folderwork">
-            <img src="/Pictures/folderman.png" alt="GlASSARTSTORIES">
+            <img src="./Pictures/folderman.png" alt="GlASSARTSTORIES">
             <div class="ower-text">
               <p>Название:</p>
               <h1>GlASSARTSTORIES</h1>
             </div>
           </div>
           <div class="folderwork">
-            <img src="/Pictures/foldercat.png" alt="MULTILABEL">
+            <img src="./Pictures/foldercat.png" alt="MULTILABEL">
             <div class="ower-text">
               <p>Название:</p>
               <h1>MULTILABEL</h1>
