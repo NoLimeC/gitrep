@@ -27,7 +27,7 @@ body{
 
 .page{ /* настройка сетки */
   flex-direction: column;
-  padding: 25px 50px;
+  padding: 25px 50px 25px 50px;
   width: 1120px;
   max-width: 1120px;
   min-width: 360px;
@@ -45,7 +45,7 @@ body{
 }
 
 p {
-  font-size: 100%;
+  font-size:clamp(10px,2vw,20px) ;
 }
 
 
@@ -208,12 +208,13 @@ a{
   border-left: 4px solid #324a7b; /* цвет и толщина полоски */
   padding-left: 14px;             /* отступ между текстом и линией */
   margin: 0;                      /* убрать стандартный отступ */
-   font-size:clamp(10px,2vw,20px) ;           /* пример */
+   font-size:clamp(10px,2vw,25px) ;
   color: #324a7b;
 
 }
 
 .textmiddle p{
+  font-size:clamp(10px,2vw,25px) ;
   padding-top: 10px;
   color: #324a7b;
 }
@@ -233,9 +234,10 @@ a{
 
 .container-middlecard2{
   margin-top: 50px;
+  padding-bottom: 50px;
   display: flex;
-  align-items: top;
-  /* justify-content: space-between; */
+  align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -251,26 +253,31 @@ a{
   
 } */
 .textmiddle2{
-  transform: translateX(70px);
+  width: fit-content;
+}
+
+.arrowMiddleCard {
+ width: 100px; /* ширина родителя */
+  position: relative;
+  overflow: visible;
+  left: -50px;
 }
 
 #arrow{
-  padding-top: 30px;
-  margin-right: -40px;
-    min-width: 60px;
-    max-width: 150px;
-    position: relative;
-    pointer-events: none;
+  width: 150px; /* размер самой стрелки, можно больше родителя */
+  height: auto;
+  display: block;
+  position: relative;
 }
-@media (max-width: 1054px) {
+/* @media (max-width: 1054px) {
   #arrow {
     padding-top: 30px;
-     min-width: 30px;
-    max-width: 130px;
+     width: max-content;
   }
-}
+} */
 
 .container-middlecard2 p{
+  font-size:clamp(10px,2vw,25px) ;
   color: #324a7b;
   padding-top: 10px;
 }
@@ -316,6 +323,7 @@ a{
 }
 
 .container-footercard p{
+  font-size:clamp(20px,2vw,25px) ;
   z-index: 1;
   text-align: left;
   padding-left: 5px;
@@ -459,8 +467,8 @@ div.group img{
 }
 
 .comment .review p{
+    font-size:clamp(10px,2vw, 15px) ;
     color: white;
-    font-size: 11px;
     text-align: center;
 }
 
