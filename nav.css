@@ -1,6 +1,6 @@
 .top{ /* навигация */
-  /* center the whole nav block on the page */
   width: 100%;
+  max-width: 1120px;
   padding: 10px 70px;
   background-color: #435FBE;
   box-sizing: border-box;
