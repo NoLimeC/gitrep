@@ -43,14 +43,16 @@
   position: absolute;
   inset: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
   z-index: 0;
   pointer-events: none;
 }
 
 .footercard-bg img{
-  /* width: 120%; */
-  height: 130%;
-  transform: translateY(230px) translateX(-300px);
+  position: relative;
+  size: 50px;
+  bottom: 50px;
+  /* transform: translateY(230px) translateX(-300px); */
 }

@@ -22,7 +22,7 @@
     }
 
     p {
-        font-size: 19.375px;
+        font-size: 20px;
         color: #1F2C58;
     }
 
@@ -50,7 +50,7 @@
     flex-direction: column;
     justify-content: center;
 
-    gap: 1.4em;
+    gap: 22px;
 }
 
 .items {
@@ -82,6 +82,11 @@
         .x {
             transform: translateX(100%) translateY(-100%);
         }
+    }
+
+    img {
+        width: 31px;
+        height: 31px;
     }
 }
 
@@ -169,7 +174,7 @@ form {
     justify-content: center;
     align-items: flex-start;
 
-    gap: .5em;
+    gap: 8px;
 }
 
 input {
@@ -177,14 +182,14 @@ input {
 
     width: 100%;
     height: fit-content;
-    padding: 10px 30px 10px 30px;
+    padding: 10px 30px;
 
-    font-size: 19.375px;
+    font-size: 20px;
     color: #1F2C58;
 
     border: solid .1em #1F2C58;
 
-    border-radius: 2em;
+    border-radius: 40px;
 
 }
 
@@ -199,14 +204,14 @@ textarea {
 
     width: 100%;
     height: fit-content;
-    padding: 10px 30px 10px 30px;
+    padding: 10px 30px;
 
-    font-size: 19.375px;
+    font-size: 20px;
     color: #1F2C58;
 
     border: solid .1em #1F2C58;
 
-    border-radius: 2em;
+    border-radius: 40px;
 
     resize: none;
     line-height: 1.4;
@@ -219,12 +224,12 @@ textarea {
     height: fit-content;
     padding: 10px 30px 10px 30px;
 
-    font-size: 19.375px;
+    font-size: 20px;
     color: #EAF4FF;
 
     border: none;
 
-    border-radius: 2em;
+    border-radius: 40px;
 
     display: flex;
     justify-content: center;
@@ -234,7 +239,7 @@ textarea {
     gap: 10px;
 
     img {
-        height: .5em;
+        height: 8px;
         margin-bottom: -3px;
     }
 }

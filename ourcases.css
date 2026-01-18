@@ -77,6 +77,10 @@ svg {
 }
 
 .folderRec img{
+
+  width: auto;
+  height: 105%;
+
   /* фон картинки */
   background-image: url(./Pictures/man.png);
   background-size: cover;

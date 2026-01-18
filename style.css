@@ -84,13 +84,13 @@ img {
   justify-content: center;
   align-items: center;
 
-  #openForm {
+  #openCartBtn {
     position: relative;
     background-color: #EAF4FF;
 
     width: fit-content;
     height: fit-content;
-    padding: 30px 50px 30px 50px;
+    padding: 30px 50px;
 
     font-size: 25px;
     color: #1F2C58;
@@ -123,12 +123,13 @@ img {
 }
 
 .buy {
-  width: 100%;
+  width: 90%;
   height: 0px;
   position: fixed;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   align-items: flex-end;
   z-index: 50;
 }
@@ -136,7 +137,7 @@ img {
 .buy .buyFrame {
   position: fixed;
   bottom: 100px;
-  right: 200px;
+  /* right: 200px; */
 
   width: fit-content;
   height: fit-content;

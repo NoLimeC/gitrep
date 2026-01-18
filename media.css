@@ -1,16 +1,20 @@
-
-@media (max-width: 551px){
-  .imageCard{
-    display: none; 
+@media (max-width: 551px) {
+  .imageCard {
+    display: none;
   }
 }
 
 @media (max-width: 375px) {
+  :root {
+    --h1FontSize: 33px;
+    --pFontSize: 21px;
+  }
+
   ul li {
     display: none;
   }
 
-  .contacts{
+  .contacts {
     display: none;
   }
 
@@ -35,8 +39,174 @@
       }
 
       .items {
-        
+        p {
+          font-size: 12px;
+        }
+
       }
+
+      .item {
+
+        padding: 8px 13px;
+
+        img {
+          width: 22px;
+          height: 22px;
+        }
+
+      }
+
+    }
+
+    form {}
+
+    input {
+      font-size: 12px;
+      padding: 10px 15px
+    }
+
+    textarea {
+      font-size: 12px;
+      padding: 10px 15px;
+    }
+
+    #sendForm {
+      font-size: 12px;
+    }
+  }
+
+  .container-middlecard {
+
+    .textmiddle {}
+
+    #whowearepic {
+      display: none;
+    }
+
+    #textpod {
+      margin-top: 15px;
+    }
+  }
+
+  .container-middlecard2 {
+    padding-bottom: 100px;
+
+    #whowearepic2 {
+      display: none;
+    }
+  }
+
+  .container-footercard {
+    h1 {
+      font-size: var(--h1FontSize);
+    }
+
+    p {
+      font-size: var(--pFontSize);
+    }
+
+
+
+    .card {
+      width: 100%;
+      aspect-ratio: 507 / 414;
+
+      .cardTitle {
+        h1 {
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .openForm {
+
+      padding-bottom: 50px;
+
+      #openCartBtn {
+        font-size: var(--pFontSize);
+
+        padding: 20px 40px;
+      }
+    }
+
+    .footercard-bg{
+
+      img{
+        height: 150%;
+        bottom: -160px;
+        transform: scale(1.17);
+      }
+    }
+  }
+
+  .comments {
+    .reviews-client {
+      font-size: var(--h1FontSize);
+    }
+
+    .carusel {
+      border-radius: 100px;
+    }
+
+    .group .comment {
+
+      .reviewSection .review {
+        p {
+          font-size: 7px;
+        }
+      }
+
+      .userComment {
+        height: 70px;
+        width: 70px;
+      }
+
+      .userCircle {
+        width: 70px;
+        height: 70px;
+      }
+
+      .userNameComment {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .ourcases {
+    h1 {
+      font-size: var(--h1FontSize);
+    }
+
+    .folders {
+      .folderwork {
+        width: 100%;
+
+        .folderRec {
+          border-radius: 28px;
+
+          .ower-text {
+            h1 {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .buy{
+    width: 75%;
+    align-items: center;
+    .buyFrame{
+      padding: 10px;
+    }
+    img{
+      width: 40px;
+      height: auto;
     }
   }
 }
@@ -62,12 +232,15 @@
   .textmiddle p {
     font-size: clamp(1em, 2vw, 25px);
   }
+
   #textpod {
     font-size: clamp(1em, 2vw, 25px);
   }
+
   .container-middlecard2 p {
     font-size: clamp(1em, 2vw, 25px);
   }
+
   /* .container-footercard h1 {
         font-size: clamp(1.5em, 3.5vw, 5.5rem);
         font-weight: 900;
@@ -76,7 +249,9 @@
         min-width: 30px;
     } */
 }
+
 @media (max-width: 768px) {
+
   /* #footercard {
     display: flex;
     flex-direction: column;
@@ -94,9 +269,10 @@
 
   .ourcases .ower-text {
     font-size: clamp(10px, 2vw, 15px);
-  
-}
-/* .container-footercard h1 {
+
+  }
+
+  /* .container-footercard h1 {
   padding-top: 10px;
 }
 #footercard {
@@ -105,20 +281,23 @@
 .footercard-bg img {
   transform: translateY(200px) translateX(-300px);
 } */
-.ourcases .ower-text h1,
-p {
-  color: white;
-  text-align: left;
+  .ourcases .ower-text h1,
+  p {
+    color: white;
+    text-align: left;
+  }
 }
-}
+
 @media (max-width: 834px) {
   .arrowMiddleCard {
     display: none;
   }
 }
+
 @media (max-width: 1054px) {
   .arrowMiddleCard {
-    width: 30px; /* ширина родителя */
+    width: 30px;
+    /* ширина родителя */
     position: relative;
     overflow: visible;
     left: -10px;
