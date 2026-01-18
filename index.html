@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./card.css">
+  <link rel="stylesheet" href="./form.css">
+  <link rel="stylesheet" href="./ourcases.css">
+  <link rel="stylesheet" href="./contacts.css">
+  <link rel="stylesheet" href="./comments.css">
+  <link rel="stylesheet" href="./nav.css">
+  <link rel="stylesheet" href="./whoweare.css">
+  <link rel="stylesheet" href="./footercard.css">
+  <link rel="stylesheet" href="./media.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <title>MSY GROUP</title>
+</head>
+
+<body>
+  <div class="safeZoneIMG">
+    <div class="formSection" onclick="closeByBg(event)">
+      <div class="formDiv" onclick="event.stopPropagation()">
+        <div class="cancelBtn" onclick="closeCart()">
+          <div class="x" >
+            <img id="closeForm" src="./Pictures/x.svg" alt="">
+          </div>
+        </div>
+        <div class="form">
+          <h1>Оформление</h1>
+          <div class="choosedSection">
+            <h2>Вы выбрали</h2>
+            <div class="items">
+              <div class="itemDiv" id="igAccount" onclick="removeItem('igAccount')">
+                <div class="cancelBtn">
+                  <div class="x">
+                    <img src="./Pictures/x.svg" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./Pictures/icons/igIcon.svg" alt="">
+                  <p>IG Аккаунт</p>
+                </div>
+              </div>
+
+              <div class="itemDiv" id="fbAccount" onclick="removeItem('fbAccount')">
+                <div class="cancelBtn">
+                  <div class="x">
+                    <img src="./Pictures/x.svg" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./Pictures/icons/fbIcon.svg" alt="">
+                  <p>FB Аккаунт</p>
+                </div>
+              </div>
+
+              <div class="itemDiv" id="company" onclick="removeItem('company')">
+                <div class="cancelBtn">
+                  <div class="x">
+                    <img src="./Pictures/x.svg" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./Pictures/icons/companyIcon.svg" alt="">
+                  <p>Компания</p>
+                </div>
+              </div>
+
+              <div class="itemDiv" id="brand" onclick="removeItem('brand')">
+                <div class="cancelBtn">
+                  <div class="x">
+                    <img src="./Pictures/x.svg" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./Pictures/icons/brandIcon.svg" alt="">
+                  <p>Бренд</p>
+                </div>
+              </div>
+
+              <div class="itemDiv" id="web" onclick="removeItem('web')">
+                <div class="cancelBtn">
+                  <div class="x">
+                    <img src="./Pictures/x.svg" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./Pictures/icons/webIcon.svg" alt="">
+                  <p>Веб-Сайт</p>
+                </div>
+              </div>
+
+            </div>
+           
+            <form id="contactForm">
+              <input type="text" name="name" placeholder="Введите имя">
+              <input type="email" name="email" placeholder="Ваш email">
+              <textarea name="message" placeholder="Сообщение..."></textarea>
+               <input type="hidden" name="purchase" id="buylist">
+              <button id="sendForm" type="submit">Отправить <img src="./Pictures/sendArrow.svg" alt=""></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <div class="container-main">
+        <nav class="top">
+          <img src="./Pictures/logoheader.png" alt="">
+          <ul>
+            <li><a class="ourprice" href="#">Наші цінності</a></li>
+            <li><a href="#">Послуги</a></li>
+            <li><a href="#">Відгуки</a></li>
+            <li><a href="#">Кейси</a></li>
+            <li><a href="shop.html">Магазин</a></li>
+          </ul>
+          <button class="contacts">Контакти</button>
+          <div class="burger">
+            <span></span>
+          </div>
+        </nav>
+
+
+        <div class="container-middlecard">
+          <div class="textmiddle">
+            <h1>Хто ми є</h1>
+            <p>Ми — агентство, що об’єднує людей
+              та компанії, допомагаючи кожному
+              знайти своє місце та можливості
+              для розвитку.</p>
+            <p id="textpod">
+              Наша місія — допомогти знайти
+              роботу в Європі та відкрити шлях
+              до майбутнього.
+            </p>
+          </div>
+          <img id="whowearepic" src="./Pictures/whoweare.png" alt="">
+        </div>
+
+
+
+
+        <div class="container-middlecard2">
+          <img id="whowearepic2" src="./Pictures/ourposlugy.png" alt="">
+          <div class="textmiddle2">
+            <h1>Наші послуги</h1>
+            <p>Ми працюємо для того, щоб
+              зробити процес пошуку роботи та
+              розвитку бізнесу максимально
+              простим і результативним.</p>
+          </div>
+          <div class="arrowMiddleCard">
+            <img id="arrow" src="./Pictures/arrow.png" alt="">
+          </div>
+        </div>
+        <!-- decorative wave SVG inserted before reviews section -->
+      </div>
+      <!-- Декоративная волна -->
+
+      <div class="container-footercard">
+        <h1>Продвижение</h1>
+        <p>Реклама, продвижение вашего бренда, страницы, компании.</p>
+        <div id="footercard">
+          <div class="card" onclick="selectCard('igAccount')" data-target="igAccount" style="
+        --bg: linear-gradient(135deg, #B7C7FF, #8E2CFD, #FD0A62);">
+            <div class="cardTitle">
+              <h1>IG Аккаунт</h1>
+              <p>Продвижение инстаграм аккаунта</p>
+            </div>
+            <div class="tags">Работа / Товар /<br>Интернет услуги
+
+              <div class="imageCard">
+                <img src="./Pictures/Instagram_logo.svg" alt="">
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+          <div class="card" onclick="selectCard('fbAccount')" data-target="igAccount" data-id="fb" style="
+        --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);
+       ">
+            <div class="cardTitle">
+              <h1>FB Аккаунт</h1>
+              <p>Продвижение ФЭЙСБУК аккаунта</p>
+            </div>
+            <div class="tags">Работа / Товар /<br>Интернет услуги
+
+              <div class="imageCard" style="
+        --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);">
+                <img src="./Pictures/facebook-logo.svg" alt="">
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+          <div class="card" onclick="selectCard('company')" data-target="igAccount" data-id="company" style="
+        --bg: linear-gradient(135deg, #FFF1CC, #5E3804);
+       ">
+            <div class="cardTitle">
+              <h1>Компания</h1>
+              <p>Продвижение Вашей компании</p>
+            </div>
+            <div class="tags">Работа / Товар /<br>Интернет услуги
+
+              <div class="imageCard" style="
+        --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);">
+                <img id="tooMuch" src="./Pictures/seo-92 1.svg" alt="">
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+
+          <div class="card" onclick="selectCard('brand')" data-target="igAccount" data-id="brand" style="
+        --bg: linear-gradient(135deg, #DBC0FF, #7931D8);
+       ">
+            <div class="cardTitle">
+              <h1>Бренд</h1>
+              <p>Продвижение Вашего бренда</p>
+            </div>
+            <div class="tags">Работа / Товар /<br>Интернет услуги
+
+
+              <div class="imageCard" style="
+        --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);">
+                <img id="tooMuch" src="./Pictures/social-media-carousel-90 1.svg" alt="">
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+          <div class="card" onclick="selectCard('web')" data-target="igAccount" data-id="web" style="
+        --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);
+       ">
+            <div class="cardTitle">
+              <h1>веб-Сайт</h1>
+              <p>Продвижение вашего вебсайта</p>
+            </div>
+            <div class="tags">Работа / Товар /<br>Интернет услуги
+
+              <div class="imageCard" style="
+        --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);">
+                <img src="./Pictures/marketing-campaign-90 1.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- <img alt="" id="socialcard" src="./Pictures/fb.png">
+        <img alt="" id="socialcard" src="./Pictures/company.png">
+        <img alt="" id="socialcard" src="./Pictures/brand.png">
+        <img alt="" id="socialcardweb" src="./Pictures/website.png"> -->
+        </div>
+        <div class="openForm">
+          <button onclick="toggleCart()" id="openCartBtn" type="button">Отправить</button>
+        </div>
+        <div class="footercard-bg">
+            <img src="./Pictures/footercard.svg" alt="">
+          </div>
+      </div>
+
+      <div class="comments">
+        <h1 class="reviews-client">Відгуки кліентів</h1>
+        <div class="carusel">
+          <div class="group">
+
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+            
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+            
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="ourcases">
+        <h1>Наші кейси</h1>
+        <div class="folders">
+          <div id="1" class="folderwork">
+            <div class="folderRec">
+              <div class="ower-text">
+                <p>Название:</p>
+                <h1>SALESWAVE</h1>
+              </div>
+              <img src="./Pictures/man.png" alt="">
+            </div>
+          </div>
+          <div id="2" class="folderwork">
+            <div class="folderRec">
+              <div class="ower-text">
+                <p>Название:</p>
+                <h1>SALESWAVE</h1>
+              </div>
+              <img src="./Pictures/Rectangle 6folderIMG-1.png" alt="">
+
+            </div>
+          </div>
+          <div id="3" class="folderwork">
+            <div class="folderRec">
+              <div class="ower-text">
+                <p>Название:</p>
+                <h1>SALESWAVE</h1>
+              </div>
+              <img src="./Pictures/Rectangle 6folderIMG-2.png" alt="">
+            </div>
+          </div>
+          <div id="4" class="folderwork">
+            <div class="folderRec">
+              <div class="ower-text">
+                <p>Название:</p>
+                <h1>SALESWAVE</h1>
+              </div>
+              <img src="./Pictures/Rectangle 6folderIMG.png" alt="">
+            </div>
+          </div>
+
+          <div class="strokeSVG">
+            <img src="./Pictures/casesStroke.svg" alt="">
+          </div>
+        </div>
+
+
+        <div class="contact">
+          <div class="namefeed">
+            <h1>Контакти</h1>
+            <div class="contactsInfo">
+              <p>СЕО компании — Александр Стар — alex@msygroup.com</p>
+            </div>
+          </div>
+          <div class="contact-bg">
+            <img src="./Pictures/contacts.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="buy">
+        <div class="buyFrame" onclick="toggleCart()">
+          <img src="./Pictures/shopcorner.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <script src="./form.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</body>
+
+</html>
