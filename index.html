@@ -27,7 +27,7 @@
   <div class="safeZoneIMG">
     <div class="formSection">
       <div class="formDiv">
-        <div id="closeFormParrent" class="cancelBtn">
+        <div id="closeFormParrent" class="cancelBtn" id="closeForm" onclick="closeForm()">
           <div class="x">
             <img id="closeForm" src="./Pictures/x.svg" alt="">
           </div>
@@ -37,71 +37,71 @@
           <div class="choosedSection">
             <h2>Вы выбрали</h2>
             <div class="items">
-              <div class="itemDiv">
-                <div class="cancelBtn">
+              <div class="itemDiv" id="igAccount">
+                <div class="cancelBtn" onclick="closeig">
                   <div class="x">
                     <img src="./Pictures/x.svg" alt="">
                   </div>
                 </div>
-                <div class="item" id="igAccount">
+                <div class="item">
                   <img src="./Pictures/icons/igIcon.svg" alt="">
                   <p>IG Аккаунт</p>
                 </div>
               </div>
 
-              <div class="itemDiv">
+              <div class="itemDiv" id="fbAccount">
                 <div class="cancelBtn">
                   <div class="x">
                     <img src="./Pictures/x.svg" alt="">
                   </div>
                 </div>
-                <div class="item" id="fbAccount">
+                <div class="item">
                   <img src="./Pictures/icons/fbIcon.svg" alt="">
                   <p>FB Аккаунт</p>
                 </div>
               </div>
 
-              <div class="itemDiv">
+              <div class="itemDiv" id="company">
                 <div class="cancelBtn">
                   <div class="x">
                     <img src="./Pictures/x.svg" alt="">
                   </div>
                 </div>
-                <div class="item" id="company">
+                <div class="item">
                   <img src="./Pictures/icons/companyIcon.svg" alt="">
                   <p>FB Аккаунт</p>
                 </div>
               </div>
 
-              <div class="itemDiv">
+              <div class="itemDiv" id="brand">
                 <div class="cancelBtn">
                   <div class="x">
                     <img src="./Pictures/x.svg" alt="">
                   </div>
                 </div>
-                <div class="item" id="brand">
+                <div class="item">
                   <img src="./Pictures/icons/brandIcon.svg" alt="">
                   <p>Бренд</p>
                 </div>
               </div>
 
-              <div class="itemDiv">
+              <div class="itemDiv" id="web">
                 <div class="cancelBtn">
                   <div class="x">
                     <img src="./Pictures/x.svg" alt="">
                   </div>
                 </div>
-                <div class="item" id="web">
+                <div class="item">
                   <img src="./Pictures/icons/webIcon.svg" alt="">
                   <p>Веб-Сайт</p>
                 </div>
               </div>
 
             </div>
-            <form action="">
-              <input type="text" placeholder="Введите имя">
-              <input type="email" placeholder="Ваш email">
-              <textarea id="msg" placeholder="Сообщение..."></textarea>
+            <form id="contactForm">
+              <input type="text" name="name" placeholder="Введите имя">
+              <input type="email" name="email" placeholder="Ваш email">
+              <textarea name="message" placeholder="Сообщение..."></textarea>
               <button id="sendForm" type="submit">Отправить <img src="./Pictures/sendArrow.svg" alt=""></button>
             </form>
           </div>
@@ -146,7 +146,7 @@
 
 
         <div class="container-middlecard2">
-          <img src="./Pictures/ourposlugy.png" alt="">
+          <img id="whowearepic2" src="./Pictures/ourposlugy.png" alt="">
           <div class="textmiddle2">
             <h1>Наші послуги</h1>
             <p>Ми працюємо для того, щоб
@@ -166,60 +166,104 @@
         <h1>Продвижение</h1>
         <p>Реклама, продвижение вашего бренда, страницы, компании.</p>
         <div id="footercard">
-          <div class="card" data-id="ig" style="
-        --bg: linear-gradient(135deg, #B7C7FF, #8E2CFD, #FD0A62);
-        --icon: url('./Pictures/Instagram_icon.png.webp');
-       ">
-            <div>
+          <div class="card" id="instagramcard" onclick="instagram()" data-id="ig" style="
+        --bg: linear-gradient(135deg, #B7C7FF, #8E2CFD, #FD0A62);">
+            <div class="cardTitle">
               <h1>IG Аккаунт</h1>
               <p>Продвижение инстаграм аккаунта</p>
             </div>
-            <div class="imageCard" style=" --icon: url('./Pictures/Instagram_icon.png.webp');"></div>
-            <div class="tags">Работа / Товар /<br>Интернет услуги</div>
+            <div class="tags">Работа / Товар /<br>Интернет услуги
+
+              <div class="imageCard">
+                <img src="./Pictures/Instagram_logo.svg" alt="">
+              </div>
+
+            </div>
           </div>
-          <div class="card" data-id="fb" style="
+
+
+
+
+          <div class="card" id="facebookcard" onclick="facebook" data-id="fb" style="
         --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);
-        --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
-            <div>
+            <div class="cardTitle">
               <h1>FB Аккаунт</h1>
               <p>Продвижение ФЭЙСБУК аккаунта</p>
             </div>
-            <div class="imageCard" style=" --icon: url('./Pictures/Instagram_icon.png.webp');"></div>
-            <div class="tags">Работа / Товар /<br>Интернет услуги</div>
+            <div class="tags">Работа / Товар /<br>Интернет услуги
+
+              <div class="imageCard" style="
+        --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);">
+                <img src="./Pictures/facebook-logo.svg" alt="">
+              </div>
+            </div>
+
           </div>
-          <div class="card" data-id="company" style="
+
+
+
+
+
+          <div class="card" id="companycard" onclick="company" data-id="company" style="
         --bg: linear-gradient(135deg, #FFF1CC, #5E3804);
-        --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
-            <div>
+            <div class="cardTitle">
               <h1>Компания</h1>
               <p>Продвижение Вашей компании</p>
             </div>
-            <div class="imageCard" style=" --icon: url('./Pictures/Instagram_icon.png.webp');"></div>
-            <div class="tags">Работа / Товар /<br>Интернет услуги</div>
+            <div class="tags">Работа / Товар /<br>Интернет услуги
+            
+            <div class="imageCard" style="
+        --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);">
+              <img id="tooMuch" src="./Pictures/seo-92 1.svg" alt="">
+            </div>
+          
           </div>
-          <div class="card" data-id="brand" style="
+          </div>
+
+
+
+
+
+          <div class="card" id="brandcard" onclick="brand" data-id="brand" style="
         --bg: linear-gradient(135deg, #DBC0FF, #7931D8);
-        --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
-            <div>
+            <div class="cardTitle">
               <h1>Бренд</h1>
               <p>Продвижение Вашего бренда</p>
             </div>
-            <div class="imageCard" style=" --icon: url('./Pictures/Instagram_icon.png.webp');"></div>
-            <div class="tags">Работа / Товар /<br>Интернет услуги</div>
+            <div class="tags">Работа / Товар /<br>Интернет услуги
+            
+            
+            <div class="imageCard" style="
+        --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);">
+              <img id="tooMuch" src="./Pictures/social-media-carousel-90 1.svg" alt="">
+            </div>
+          
           </div>
-          <div class="card" data-id="web" style="
+          </div>
+
+
+
+
+
+
+
+          <div class="card" id="webcard" onclick="web" data-id="web" style="
         --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);
-        --icon: url('./Pictures/Instagram_icon.png.webp');
        ">
-            <div>
+            <div class="cardTitle">
               <h1>веб-Сайт</h1>
               <p>Продвижение вашего вебсайта</p>
             </div>
-            <div class="imageCard" style=" --icon: url('./Pictures/Instagram_icon.png.webp');"></div>
-            <div class="tags">Работа / Товар /<br>Интернет услуги</div>
+            <div class="tags">Работа / Товар /<br>Интернет услуги
+            
+            <div class="imageCard" style="
+        --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);">
+              <img src="./Pictures/marketing-campaign-90 1.svg" alt="">
+            </div>
+          </div>
           </div>
           <!-- <img alt="" id="socialcard" src="./Pictures/fb.png">
         <img alt="" id="socialcard" src="./Pictures/company.png">
@@ -227,7 +271,7 @@
         <img alt="" id="socialcardweb" src="./Pictures/website.png"> -->
         </div>
         <div class="openForm">
-          <button id="openForm" type="submit">Отправить</button>
+          <button onclick="test()" id="openForm" type="button">Отправить</button>
           <div class="footercard-bg">
             <img src="./Pictures/footercard.svg" alt="">
           </div>
@@ -340,14 +384,44 @@
           </div>
         </div>
       </div>
-
       <div class="ourcases">
         <h1>Наші кейси</h1>
         <div class="folders">
-          <div class="folderwork">
-            <div class="ower-text">
-              <p>Название:</p>
-              <h1>SALESWAVE</h1>
+          <div id="1" class="folderwork">
+            <div class="folderRec">
+              <div class="ower-text">
+                <p>Название:</p>
+                <h1>SALESWAVE</h1>
+              </div>
+              <img src="./Pictures/man.png" alt="">
+            </div>
+          </div>
+          <div id="2" class="folderwork">
+            <div class="folderRec">
+              <div class="ower-text">
+                <p>Название:</p>
+                <h1>SALESWAVE</h1>
+              </div>
+              <img src="./Pictures/Rectangle 6folderIMG-1.png" alt="">
+
+            </div>
+          </div>
+          <div id="3" class="folderwork">
+            <div class="folderRec">
+              <div class="ower-text">
+                <p>Название:</p>
+                <h1>SALESWAVE</h1>
+              </div>
+              <img src="./Pictures/Rectangle 6folderIMG-2.png" alt="">
+            </div>
+          </div>
+          <div id="4" class="folderwork">
+            <div class="folderRec">
+              <div class="ower-text">
+                <p>Название:</p>
+                <h1>SALESWAVE</h1>
+              </div>
+              <img src="./Pictures/Rectangle 6folderIMG.png" alt="">
             </div>
           </div>
 
@@ -369,12 +443,18 @@
           </div>
         </div>
       </div>
+      <div class="buy">
+        <div class="buyFrame" onclick="shopcard()">
+          <img src="./Pictures/shopcorner.svg" alt="">
+        </div>
+      </div>
     </div>
-
   </div>
+
   </div>
 
   <script src="./form.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </body>
 
 </html>

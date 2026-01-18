@@ -1,51 +1,73 @@
 .card {
 
+  pointer-events: none;
+  width: 450px;
+  max-width: 500px;
+  aspect-ratio: 507 / 414;
+
   cursor: pointer;
   transition: transform .2s, box-shadow .2s;
 
   /* ====== размеры системы ====== */
-  max-width: clamp(250px, 50vw, 480px);
-  height: clamp(250px, 50vw, 480px);
-  width: 100%;
 
   border-radius: 50px;
-  padding: clamp(15px, 10vw, 50px);
+  /* padding: 30px; */
+  /* margin-right: 50px;
+  margin-bottom: 40px; */
 
   /* ====== параметры (переопределяются) ====== */
   --bg: linear-gradient(135deg, #B7C7FF, #8E2CFD, #FD0A62);
-  --icon: url("./Pictures/Instagram_icon.png.webp");
 
   background: var(--bg);
   color: white;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   display: flex;
-  /* flex: none; */
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
 
-  font-family: Inter, sans-serif;
   text-transform: uppercase;
 
-  box-shadow: inset 0 -14px 0 0 rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 -14px 0 0 rgba(255, 255, 255, 0.5),
+    rgb(38, 57, 100) 0px 20px 40px -10px;
+
+
   z-index: 0;
+}
 
-  h1 {
-    font-size: clamp(2rem, 3.5vw, 3em);
-  }
+.imageCard {
+  position: relative;
+  width: 100%;
+  height: 0px;
 
-  p {
-    font-size: clamp(1rem, 2.5vw, 1.5em);
-    margin-top: -10px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.imageCard img {
+  position: absolute;
+  height: 250px;
+  width: auto;
+  /* rotate3d(x, y, z, a) */
+  transform: skew(-10deg, -13deg);
+  bottom: -27px;
+  left: 170px;
+
+  background-color: transparent;
+
+  filter: drop-shadow(0px 12px 10px rgba(0, 0, 0, .25));
+}
+
+#tooMuch {
+  left: 150px;
 }
 
 .tags {
+  padding: 30px;
   margin-bottom: 10px;
-  font-size: clamp(1rem, 2.5vw, 1.5em);
   font-style: italic;
 }
 
@@ -54,55 +76,16 @@
   transform: scale(1.03);
 }
 
-
-/* Заголовок  */
-/* .card h1{
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 8px;
- } */
-
-/* описание */
-
-/* теги */
-/* .card .tags{
-  font-size: 12px;
-  opacity: 0.85;
-} */
-
-/* .card .imageCard{
-  width: 345px;
-  height: 345px;
-   background-color: white; 
-   background: var(--icon) center / contain no-repeat; 
-  background-image: var(--icon);
-  background-size: fit;
-  background-repeat: no-repeat;
-  background-position: center;
-  pointer-events: none; 
-  z-index: 1;
-  
-  transform: translateX(240px) translateY(-6px); 
-} */
-
-/* картинка */
-/* .casrd::after{
-  content: "";
-  position: absolute;
-  width: 345px;
-  height: 345px;
-  background: var(--icon) center / contain no-repeat;
-  pointer-events: none;
-  
-  transform: translateX(240px) translateY(-6px); 
-} */
-
-.card {
-  /* transform: translateY(-50%); */
-  pointer-events: none;
+.card .cardTitle {
+  padding: 30px
 }
 
-/* Responsive styles for smaller screens */
+.cardTitle p {
+  width: 55%;
+}
+
+
+/* Responsive styles for smaller screens
 @media (max-width: 768px) {
   .card {
     height: 250px;
@@ -140,4 +123,4 @@
   .tags {
     font-size: 12px;
   }
-}
+} */

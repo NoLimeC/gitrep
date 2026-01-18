@@ -1,6 +1,6 @@
 .container-middlecard {
     display: flex;
-    align-items: top;
+    align-items: flex-start;
     width: 100%;
     margin-top: 50px;
 }
@@ -13,6 +13,7 @@
     width: 100%;
     position: relative;
     z-index: 2;
+    
 }
 .textmiddle {
     min-width: 280px;
