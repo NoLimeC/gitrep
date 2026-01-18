@@ -1,3 +1,46 @@
+
+@media (max-width: 551px){
+  .imageCard{
+    display: none; 
+  }
+}
+
+@media (max-width: 375px) {
+  ul li {
+    display: none;
+  }
+
+  .contacts{
+    display: none;
+  }
+
+  .top {
+    padding: 10px 30px;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .form {
+    width: 250px;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    .choosedSection {
+      h2 {
+        font-size: 16px;
+      }
+
+      .items {
+        
+      }
+    }
+  }
+}
+
 @media (max-width: 1488px) {
   .textmiddle h1 {
     font-size: clamp(1.5em, 3.5vw, 5.5rem);
@@ -89,35 +132,13 @@ p {
   }
 }
 
-#arrow {
-  width: 50px;
-  height: auto;
-  display: block;
-  position: relative;
-}
-
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .burger {
-    display: flex;
+    display: block;
   }
   .burger span {
     display: block;
   }
-
-  /* .top{ в разработке
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0; 
-    right: 0;
-    bottom: 0;
-    z-index: 50;
-    overflow-y: auto;
-    padding: 50px 40px;
-    background-color: black;*/
 
   .top ul {
     flex-direction: column;
@@ -147,4 +168,4 @@ p {
   #arrow {
     margin-right: 0px;
   }
-}
+} */

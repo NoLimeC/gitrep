@@ -29,9 +29,9 @@
 }
 
 .form {
-    width: 60vh;
+    width: 400px;
     height: fit-content;
-    padding: 25px 50px 25px 50px;
+    padding: 25px 50px;
     background-color: #DBE4EE;
     border-radius: 50px;
 
@@ -58,24 +58,24 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: .6em .6em;
+    gap: 9px 9px;
 }
 
 .item {
     width: fit-content;
     height: fit-content;
-    padding: .5em 2em .5em 2em;
+    padding: 8px 32px;
 
-    gap: .5em;
+    gap: 8px;
 
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: left;
     align-items: center;
 
     background-color: #EAF4FF;
 
-    border-radius: 2em 1em 2em 2em;
+    border-radius: 32px 16px 32px 32px;
     border: solid .1em #1F2C58;
 
     .cancelBtn {
@@ -92,9 +92,6 @@
 }
 #igAccount{
     display: none;
-}
-#igAccount:hover{
-    cursor: pointer;
 }
 #fbAccount{
     display: none;

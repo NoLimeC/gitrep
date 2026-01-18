@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./card.css">
   <link rel="stylesheet" href="./form.css">
-  <link rel="stylesheet" href="./media.css">
   <link rel="stylesheet" href="./ourcases.css">
   <link rel="stylesheet" href="./contacts.css">
   <link rel="stylesheet" href="./comments.css">
   <link rel="stylesheet" href="./nav.css">
   <link rel="stylesheet" href="./whoweare.css">
   <link rel="stylesheet" href="./footercard.css">
+  <link rel="stylesheet" href="./media.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -25,10 +25,10 @@
 
 <body>
   <div class="safeZoneIMG">
-    <div class="formSection">
-      <div class="formDiv">
-        <div id="closeFormParrent" class="cancelBtn" id="closeForm" onclick="closeForm()">
-          <div class="x">
+    <div class="formSection" onclick="closeByBg(event)">
+      <div class="formDiv" onclick="event.stopPropagation()">
+        <div id="closeFormParrent" class="cancelBtn" onclick="closeForm()">
+          <div class="x" onclick="closeCart()">
             <img id="closeForm" src="./Pictures/x.svg" alt="">
           </div>
         </div>
@@ -37,8 +37,8 @@
           <div class="choosedSection">
             <h2>Вы выбрали</h2>
             <div class="items">
-              <div class="itemDiv" id="igAccount">
-                <div class="cancelBtn" onclick="closeig">
+              <div class="itemDiv" id="igAccount" onclick="removeItem('igAccount')">
+                <div class="cancelBtn">
                   <div class="x">
                     <img src="./Pictures/x.svg" alt="">
                   </div>
@@ -49,7 +49,7 @@
                 </div>
               </div>
 
-              <div class="itemDiv" id="fbAccount">
+              <div class="itemDiv" id="fbAccount" onclick="removeItem('fbAccount')">
                 <div class="cancelBtn">
                   <div class="x">
                     <img src="./Pictures/x.svg" alt="">
@@ -61,7 +61,7 @@
                 </div>
               </div>
 
-              <div class="itemDiv" id="company">
+              <div class="itemDiv" id="company" onclick="removeItem('company')">
                 <div class="cancelBtn">
                   <div class="x">
                     <img src="./Pictures/x.svg" alt="">
@@ -69,11 +69,11 @@
                 </div>
                 <div class="item">
                   <img src="./Pictures/icons/companyIcon.svg" alt="">
-                  <p>FB Аккаунт</p>
+                  <p>Компания</p>
                 </div>
               </div>
 
-              <div class="itemDiv" id="brand">
+              <div class="itemDiv" id="brand" onclick="removeItem('brand')">
                 <div class="cancelBtn">
                   <div class="x">
                     <img src="./Pictures/x.svg" alt="">
@@ -85,7 +85,7 @@
                 </div>
               </div>
 
-              <div class="itemDiv" id="web">
+              <div class="itemDiv" id="web" onclick="removeItem('web')">
                 <div class="cancelBtn">
                   <div class="x">
                     <img src="./Pictures/x.svg" alt="">
@@ -98,10 +98,12 @@
               </div>
 
             </div>
+           
             <form id="contactForm">
               <input type="text" name="name" placeholder="Введите имя">
               <input type="email" name="email" placeholder="Ваш email">
               <textarea name="message" placeholder="Сообщение..."></textarea>
+               <input type="hidden" name="purchase" id="buylist">
               <button id="sendForm" type="submit">Отправить <img src="./Pictures/sendArrow.svg" alt=""></button>
             </form>
           </div>
@@ -166,7 +168,7 @@
         <h1>Продвижение</h1>
         <p>Реклама, продвижение вашего бренда, страницы, компании.</p>
         <div id="footercard">
-          <div class="card" id="instagramcard" onclick="instagram()" data-id="ig" style="
+          <div class="card" onclick="selectCard('igAccount')" data-target="igAccount" style="
         --bg: linear-gradient(135deg, #B7C7FF, #8E2CFD, #FD0A62);">
             <div class="cardTitle">
               <h1>IG Аккаунт</h1>
@@ -184,7 +186,7 @@
 
 
 
-          <div class="card" id="facebookcard" onclick="facebook" data-id="fb" style="
+          <div class="card" onclick="selectCard('fbAccount')" data-target="igAccount" data-id="fb" style="
         --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);
        ">
             <div class="cardTitle">
@@ -205,7 +207,7 @@
 
 
 
-          <div class="card" id="companycard" onclick="company" data-id="company" style="
+          <div class="card" onclick="selectCard('company')" data-target="igAccount" data-id="company" style="
         --bg: linear-gradient(135deg, #FFF1CC, #5E3804);
        ">
             <div class="cardTitle">
@@ -213,20 +215,20 @@
               <p>Продвижение Вашей компании</p>
             </div>
             <div class="tags">Работа / Товар /<br>Интернет услуги
-            
-            <div class="imageCard" style="
+
+              <div class="imageCard" style="
         --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);">
-              <img id="tooMuch" src="./Pictures/seo-92 1.svg" alt="">
+                <img id="tooMuch" src="./Pictures/seo-92 1.svg" alt="">
+              </div>
+
             </div>
-          
-          </div>
           </div>
 
 
 
 
 
-          <div class="card" id="brandcard" onclick="brand" data-id="brand" style="
+          <div class="card" onclick="selectCard('brand')" data-target="igAccount" data-id="brand" style="
         --bg: linear-gradient(135deg, #DBC0FF, #7931D8);
        ">
             <div class="cardTitle">
@@ -234,14 +236,14 @@
               <p>Продвижение Вашего бренда</p>
             </div>
             <div class="tags">Работа / Товар /<br>Интернет услуги
-            
-            
-            <div class="imageCard" style="
+
+
+              <div class="imageCard" style="
         --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);">
-              <img id="tooMuch" src="./Pictures/social-media-carousel-90 1.svg" alt="">
+                <img id="tooMuch" src="./Pictures/social-media-carousel-90 1.svg" alt="">
+              </div>
+
             </div>
-          
-          </div>
           </div>
 
 
@@ -250,7 +252,7 @@
 
 
 
-          <div class="card" id="webcard" onclick="web" data-id="web" style="
+          <div class="card" onclick="selectCard('web')" data-target="igAccount" data-id="web" style="
         --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);
        ">
             <div class="cardTitle">
@@ -258,12 +260,12 @@
               <p>Продвижение вашего вебсайта</p>
             </div>
             <div class="tags">Работа / Товар /<br>Интернет услуги
-            
-            <div class="imageCard" style="
+
+              <div class="imageCard" style="
         --bg: linear-gradient(135deg, #B7C7FF, #3B75F0);">
-              <img src="./Pictures/marketing-campaign-90 1.svg" alt="">
+                <img src="./Pictures/marketing-campaign-90 1.svg" alt="">
+              </div>
             </div>
-          </div>
           </div>
           <!-- <img alt="" id="socialcard" src="./Pictures/fb.png">
         <img alt="" id="socialcard" src="./Pictures/company.png">
@@ -271,7 +273,7 @@
         <img alt="" id="socialcardweb" src="./Pictures/website.png"> -->
         </div>
         <div class="openForm">
-          <button onclick="test()" id="openForm" type="button">Отправить</button>
+          <button onclick="toggleCart()" id="openCartBtn" type="button">Отправить</button>
           <div class="footercard-bg">
             <img src="./Pictures/footercard.svg" alt="">
           </div>
@@ -291,8 +293,13 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="./Pictures/Person2.png" alt="Марина">
-              <div class="name">МАРИНА</div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
             </div>
 
             <div class="comment">
@@ -303,8 +310,30 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="./Pictures/Person2.png" alt="Марина">
-              <div class="name">МАРИНА</div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+            
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
             </div>
 
             <div class="comment">
@@ -315,34 +344,13 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="./Pictures/Person2.png" alt="Марина">
-              <div class="name">МАРИНА</div>
-            </div>
-
-
-            <div class="comment">
-              <div class="reviewSection">
-                <div class="review">
-                  <p>Рекомендую!</p>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
                 </div>
-                <div class="commentArrow">
-                </div>
+                <div class="userNameComment">МАРИНА</div>
               </div>
-              <img src="./Pictures/Person2.png" alt="Марина">
-              <div class="name">МАРИНА</div>
-            </div>
 
-
-            <div class="comment">
-              <div class="reviewSection">
-                <div class="review">
-                  <p>Отличное сопровождение</p>
-                </div>
-                <div class="commentArrow">
-                </div>
-              </div>
-              <img src="./Pictures/Person2.png" alt="Марина">
-              <div class="name">МАРИНА</div>
             </div>
 
             <div class="comment">
@@ -353,8 +361,13 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="./Pictures/Person2.png" alt="Марина">
-              <div class="name">МАРИНА</div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
             </div>
 
             <div class="comment">
@@ -365,8 +378,13 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="./Pictures/Person2.png" alt="Марина">
-              <div class="name">МАРИНА</div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
             </div>
 
             <div class="comment">
@@ -377,8 +395,81 @@
                 <div class="commentArrow">
                 </div>
               </div>
-              <img src="./Pictures/Person2.png" alt="Марина">
-              <div class="name">МАРИНА</div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+            
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
+            </div>
+
+            <div class="comment">
+              <div class="reviewSection">
+                <div class="review">
+                  <p>Отличное сопровождение</p>
+                </div>
+                <div class="commentArrow">
+                </div>
+              </div>
+              <div class="userComment">
+                <div class="userCircle">
+                  <img src="./Pictures/userIcon_WhiteGirl.svg" alt="">
+                </div>
+                <div class="userNameComment">МАРИНА</div>
+              </div>
+
             </div>
 
           </div>
@@ -444,7 +535,7 @@
         </div>
       </div>
       <div class="buy">
-        <div class="buyFrame" onclick="shopcard()">
+        <div class="buyFrame" onclick="toggleCart()">
           <img src="./Pictures/shopcorner.svg" alt="">
         </div>
       </div>

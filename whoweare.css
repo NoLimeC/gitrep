@@ -60,3 +60,10 @@
     color: #324a7b;
     padding-top: 10px;
 }
+
+#arrow {
+  width: 50px;
+  height: auto;
+  display: block;
+  position: relative;
+}
