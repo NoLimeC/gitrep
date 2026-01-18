@@ -122,7 +122,7 @@ img {
 
 }
 
-.buy {
+/* .buy {
   width: 90%;
   height: 0px;
   position: fixed;
@@ -132,12 +132,23 @@ img {
   justify-content: center;
   align-items: flex-end;
   z-index: 50;
-}
+} */
+ /* .buy{
+    width: 75%;
+    align-items: center;
+    .buyFrame{
+      padding: 10px;
+    }
+    img{
+      width: 40px;
+      height: auto;
+    }
+  } */
 
-.buy .buyFrame {
+/* .buyFrame {
   position: fixed;
   bottom: 100px;
-  /* right: 200px; */
+  /* right: 200px; 
 
   width: fit-content;
   height: fit-content;
@@ -154,7 +165,31 @@ img {
   width: 70px;
   height: auto;
 
+} */
+ .buy {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
 }
+
+.buyFrame {
+  width: fit-content;
+  height: fit-content;
+
+  padding: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: solid 2px #1F2C58;
+
+  cursor: pointer;
+}
+
+.buy img {
+  width: 70px;
+  height: auto;
+}
+
 .buy:hover .buyFrame:hover{
   cursor: pointer;
   background-color: #68738b;
