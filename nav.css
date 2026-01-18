@@ -1,0 +1,88 @@
+.top{ /* навигация */
+  /* center the whole nav block on the page */
+  width: 100%;
+  padding: 10px 70px;
+  background-color: #435FBE;
+  box-sizing: border-box;
+  border-radius: 30px;
+  background-image:linear-gradient(#435FBE,#1F2C58 );
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+nav.top img{ /* logo inside the nav */
+  height: 40px;
+  /* margin-right: auto; */
+}
+
+/* layout for the menu inside the nav */
+.top ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.burger{
+  display: none;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+  padding-top: 20px;
+}
+.burger span{
+  height: 2px;
+  width: 80%;
+  transform: scale(1);
+  background-color: white;
+}
+.burger::before,.burger::after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+.burger::before{
+  top: 11px;
+}
+.burger::after{
+  bottom:-10px;
+}
+.burger.active span{
+  transform: scale(0);
+}
+.burger.active::before{
+  top: 50%;
+  transform: translate(0,50%) rotate(-45deg);
+}
+.burger.active::after{
+  bottom: 50%;
+  transform: translate(0,50%) rotate(45deg);
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+.ourprice{
+  text-decoration: underline;
+}
+/* small visual tweak for the nav button so it doesn't wrap awkwardly */
+.contacts{
+  /* margin-left: 20px; */
+  background-image: linear-gradient(to bottom right,#B7C7FF,#3B75F0);
+  padding:0px 10px;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 12px -12px 10px -7px rgba(41, 70, 134, 0.75) inset;
+  /* overflow: visible; */
+}

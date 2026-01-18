@@ -1,0 +1,69 @@
+.container-middlecard {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 50px;
+}
+    .container-middlecard2 {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    
+}
+.textmiddle {
+    min-width: 280px;
+}
+    .container-middlecard img {
+    width: 40%;
+    height: 40%;
+    max-width: 420px;
+}
+.container-middlecard2 img {
+    width: 40%;
+    height: 40%;
+    max-width: 420px;
+}
+.textmiddle2 {
+    width: fit-content;
+}
+.arrowMiddleCard {
+    width: 100px;
+    position: relative;
+    overflow: visible;
+    left: -50px;
+}
+#arrow{
+  width: 150px; /* размер самой стрелки, можно больше родителя */
+  height: auto;
+  display: block;
+  position: relative;
+}
+#textpod {
+    border-left: 4px solid #324a7b;
+    padding-left: 14px;
+    margin: 0;
+    font-size: clamp(10px, 2vw, 25px);
+    color: #324a7b;
+}
+.textmiddle p {
+    font-size: clamp(10px, 2vw, 25px);
+    padding-top: 10px;
+    color: #324a7b;
+}
+.container-middlecard2 p {
+    font-size: clamp(10px, 2vw, 25px);
+    color: #324a7b;
+    padding-top: 10px;
+}
+
+#arrow {
+  width: 50px;
+  height: auto;
+  display: block;
+  position: relative;
+}
