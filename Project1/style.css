@@ -1,4 +1,4 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -428,7 +428,9 @@ div.group img {
 .contact {
   background-image: url(/Pictures/footerbcg.png);
   background-size: cover;
+  /* растянуть на весь экран */
   background-repeat: no-repeat;
+  /* не повторять */
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -449,4 +451,4 @@ div.group img {
   text-align: left;
   padding-top: 10%;
   padding-left: 4%;
-} */
+}

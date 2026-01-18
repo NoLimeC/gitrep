@@ -1,3 +1,9 @@
+@media (max-width: 551px) {
+  .imageCard {
+    display: none;
+  }
+}
+
 @media (max-width: 375px) {
   :root {
     --h1FontSize: 33px;
@@ -71,7 +77,9 @@
 
   .container-middlecard {
 
-    .textmiddle {}
+    .textmiddle {
+      width: 100%;
+    }
 
     #whowearepic {
       display: none;
@@ -231,5 +239,135 @@
       top: -300px;
       width: 350%;
     }
+  }
+}
+
+@media (max-width: 1488px) {
+  .textmiddle h1 {
+    font-size: clamp(1.5em, 3.5vw, 5.5rem);
+    font-weight: 900;
+    color: #1f2c58;
+    text-align: left;
+    min-width: 30px;
+  }
+
+  .container-middlecard2 h1 {
+    font-size: clamp(1.5em, 3.5vw, 5.5rem);
+    font-weight: 900;
+    color: #1f2c58;
+    text-align: left;
+    min-width: 30px;
+  }
+
+
+  .textmiddle p {
+    font-size: clamp(1em, 2vw, 25px);
+  }
+
+  #textpod {
+    font-size: clamp(1em, 2vw, 25px);
+  }
+
+  .container-middlecard2 p {
+    font-size: clamp(1em, 2vw, 25px);
+  }
+}
+
+@media (max-width: 768px) {
+
+  #footercard {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  } *
+  .folders {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  /* .folderwork {
+    height: clamp(1em, 23em, 23em);
+  } */
+
+  .ourcases .ower-text {
+    font-size: clamp(10px, 2vw, 15px);
+
+  }
+
+  .container-footercard h1 {
+  padding-top: 10px;
+}
+#footercard {
+  margin-top: 20px;
+}
+.footercard-bg img {
+  transform: translateY(200px) translateX(-300px);
+}
+  .ourcases .ower-text h1,
+  p {
+    color: white;
+    text-align: left;
+  }
+}
+
+@media (max-width: 834px) {
+  .arrowMiddleCard {
+    display: none;
+  }
+}
+
+@media (max-width: 1054px) {
+  .arrowMiddleCard {
+    width: 30px;
+    /* ширина родителя */
+    position: relative;
+    overflow: visible;
+    left: -10px;
+  }
+
+  #arrow {
+    width: 75px;
+    height: auto;
+    display: block;
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+  .burger span {
+    display: block;
+  }
+
+  .top ul {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  ul li {
+    display: none;
+  }
+  button.contacts {
+    display: none;
+  }
+}
+@media (max-width: 481px) {
+  .container-middlecard,
+  .container-middlecard2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #whowearepic,#whowearepic2{
+    display: none;
+  }
+  .textmiddle2 {
+    transform: translateX(0px);
+  }
+  #arrow {
+    margin-right: 0px;
   }
 }

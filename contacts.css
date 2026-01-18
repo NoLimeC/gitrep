@@ -1,7 +1,5 @@
 .contact {
   max-width: 1120px;
-  padding-top: 100px;
-  padding-bottom: 50px;
   width: 100%;
   text-align: center;
   display: flex;
@@ -35,9 +33,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   background-image: url(./Pictures/contacts.svg);
-  background-size: 150%;
+  background-size: 120%;
   background-position: center 0;
   background-repeat: no-repeat;
 }
