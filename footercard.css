@@ -1,8 +1,8 @@
-#footercard{
+#footercard {
   width: 100%;
 
   margin-top: 50px;
-  
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -11,12 +11,12 @@
 
   justify-content: space-around;
   align-items: center;
-  
+
   position: relative;
   z-index: 2;
 }
 
-.container-footercard p{
+.container-footercard p {
   z-index: 1;
   text-align: left;
   padding-top: 5px;
@@ -25,34 +25,35 @@
   color: #F1F1F1;
   opacity: 0.75;
 }
-.container-footercard h1{
+
+.container-footercard h1 {
   z-index: 1;
   color: white;
 }
 
-.container-footercard{
+.bgFooterCard {
+  padding: 25px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-image: url(./Pictures/Vector.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.container-footercard {
+
+  width: 100%;
+  max-width: 1120px;
+
+
   padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
-  position: relative;
-}
+  justify-content: center;
 
-.footercard-bg{
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.footercard-bg img{
   position: relative;
-  size: 50px;
-  bottom: 50px;
-  /* transform: translateY(230px) translateX(-300px); */
 }

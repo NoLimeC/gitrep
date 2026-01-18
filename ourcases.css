@@ -1,6 +1,8 @@
 .ourcases {
-  width: 100%;
+  
   padding-top: 100px;
+
+  max-width: 1120px;
 
   gap: 50px;
 
@@ -12,6 +14,7 @@
 }
 
 .folders {
+  margin: 0 auto;
   width: 100%;
   height: fit-content;
   display: flex;
@@ -26,7 +29,7 @@ svg {
 }
 
 .folderwork {
-  width: 400px;
+  width: 450px;
   max-width: 492px;
   aspect-ratio: 492 / 395;
   background-image: url(./Pictures/folder.svg);
@@ -64,6 +67,7 @@ svg {
   justify-content: center;
 
   overflow: hidden;
+  margin: 0 auto;
 
 
   /* From https://css.glass */
@@ -120,21 +124,37 @@ p {
   color: white;
 }
 
+.ourcasesBg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  padding: 25px 50px;
+  
+  background-image: url(./Pictures/casesStroke.svg);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: top center;
+}
 
 .ourcases .strokeSVG {
-  position: absolute;
+  width: 100%;
+  height: 0px;
+  position: relative;
   inset: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: -20;
+  align-items: flex-end;
+  flex-direction: reverse;
+  z-index: -2;
   pointer-events: none;
 }
 
 .ourcases .strokeSVG img {
-  --size: 300%;
-
-  width: var(--size);
-  height: var(--size);
-  transform: translateY(-700px) translateX(0px);
+  position: absolute;
+  bottom: -70px;
+  width: 150%;
+  height: auto;
+  /* transform: translateY(-700px) translateX(0px); */
 }
